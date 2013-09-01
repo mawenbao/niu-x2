@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %} 存档 | {{ super() }} {% endblock %}
+{% block content %}
+<div class="niu2-page">
+	<h1>存档</h1>
+	<ul>
+	   {% for article in articles %}
+           {% if loop.first or article.date.strftime('%Y %m') != articles[loop.index0-1].date.strftime('%Y %m') %}
+	       {% set currArcDate = article.date.strftime('%Y-%m') %}
+	       <a class="niu2-toggle-ctrl" data-toggle="collapse" data-target="#arc-{{ currArcDate }}">
+	           {{ currArcDate }}
+	       </a>
+	       <ul id="arc-{{ currArcDate }}" class="collapse {{ 'in' if loop.first else 'out' }}">
+		   {% endif %}
+	       <li>
+	           <a href="{{ SITEURL }}/{{ article.url }}" title="分类 {{ article.category }}">
+                   {{ article.html_h1 | default(article.title) }}
+	           </a>
+	       </li>
+	       {% if loop.last or article.date.strftime('%Y %m') != articles[loop.index0+1].date.strftime('%Y %m') %}
+	       </ul>
+           {% endif %}
+	   {% endfor %}
+	</ul>
+</div>
+{% endblock %}

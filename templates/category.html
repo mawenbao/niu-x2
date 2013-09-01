@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% if MY_CATEGORY_MAP %}
+    {% set my_cat = MY_CATEGORY_MAP[category][0] %}
+    {% set my_cat_icon = MY_CATEGORY_MAP[category][1] %}
+{% else %}
+    {% set my_cat = category %}
+    {% set my_cat_icon = "icon-folder-open" %}
+{% endif %}
+
+{% block title %}分类 {{ my_cat }} | {{ super() }}{% endblock %}
+
+{% block index_title %}分类 {{ my_cat }}{% endblock %}
+
+{% block content_header %}
+
+<h1 class="niu2-index-title">
+<i class="{{ my_cat_icon }}"></i> {{ my_cat }}
+</h1>
+
+{% endblock content_header %}

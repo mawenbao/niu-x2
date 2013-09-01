@@ -1,0 +1,173 @@
+/*
+ * built with boostrap3 
+ * @navbar-height: 30px
+ * @nav-link-padding: 7px
+ */
+
+#disqus_thread {
+	margin-top: 30px;
+}
+
+.niu2-index-title {
+	margin-bottom: 20px;
+}
+
+/*
+.niu2-index-article a:hover {
+	text-decoration: none;
+    color: white;
+    background-color: #428bca;
+    display: inline-block;
+}
+*/
+
+.niu2-index-date {
+    width: 40%;
+}
+
+.niu2-index-article {
+	font-size: 16px;
+	margin: 5px 5px 5px 0;
+	width: 60%;
+}
+
+a.niu2-toggle-ctrl {
+	cursor: pointer;
+    display: block;
+    color: #333333;
+    padding: 3px 10px;
+    font-size: 20px;
+    width: 50%;
+}
+
+a.niu2-toggle-ctrl:hover {
+	text-decoration: none;
+    color: white;
+    background-color: #428bca;
+}
+
+.niu2-footer {
+    clear: both;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.niu2-footer p {
+	padding: 0;
+	margin: 5px 0;
+}
+
+.niu2-button {
+	margin-left: 5px;
+}
+
+.niu2-icons a {
+    text-decoration: none;	
+}
+
+.niu2-meta {
+	margin-bottom: 40px;
+}
+
+.niu2-meta a {
+	color: #333333;
+}
+
+.niu2-meta-tag {
+    padding-left: 10px;	
+}
+
+#niu2-tagcloud {
+	margin-top: 15px;
+}
+
+#niu2-tagcloud-filter-input {
+	width: 40%;
+}
+
+#niu2-tagcloud ul {
+    padding: 0;	
+}
+
+#niu2-tagcloud a {
+    display: inline-block;
+}
+
+#niu2-tagcloud a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #428bca;
+}
+
+#niu2-tagcloud li {
+	display: inline;
+}
+
+#niu2-tagcloud li, .dropdown-toc li {
+	list-style: none;
+}
+
+.dropdown-toc a {
+	padding: 3px 0 5px 5px;
+	color: #333333;
+	display: list-item;
+}
+
+.dropdown-toc a:hover {
+	color: white;
+	background-color: #428bca;
+	text-decoration: none;
+}
+
+.dropdown-toc .dropdown-menu {
+	width: 320%;
+	max-height: 1000%;
+	overflow: auto;
+}
+
+.dropdown-toc > ul {
+    width: 250px;
+}
+
+.dropdown-toc > .dropdown-menu ul {
+    padding-left: 10px;
+}
+
+
+.dropdown-toc > .dropdown-menu > li > a {
+    padding-left: 10px;
+}
+
+.niu2-page {
+	padding-top: 15px;
+}
+
+.niu2-article {
+	padding-top: 30px;
+}
+
+/* fix headings covered by fixed header problem */
+h1:before, h2:before, h3:before,
+h4:before, h5:before, h6:before {
+	display:block;
+    content:"";
+    height:35px;
+    margin:-35px 0 0;
+}
+
+@media (max-width: 767px) {
+
+.dropdown-toc > .dropdown-menu > li > a {
+    padding: 5px 10px 5px 10px !important;
+}
+
+}
+
+@media (max-height: 300px) {
+/* 2 levels at most */
+.dropdown-toc li li li {
+    display: none !important;
+}
+
+}
+
