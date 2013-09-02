@@ -57,7 +57,7 @@ Note that:
 
 ### Category aliases
 
-NIUX2_CATEGORY_MAP: a dict of category aliases, of which each item follows the format `orig name: ("display name", "icon class")`, if you do not want a icon, just leave the icon class empty. e.g.:
+NIUX2_CATEGORY_MAP is a dictionary of category aliases, of which each item follows the format `orig name: ("display name", "icon class")`, if you do not want a icon, just leave the icon class empty. e.g.:
 
     NIUX2_CATEGORY_MAP = {
         "code": ("代码", "icon-code")
@@ -66,7 +66,7 @@ NIUX2_CATEGORY_MAP: a dict of category aliases, of which each item follows the f
 
 ### Navigation bar
 
-NIUX2_HEADER_SECTIONS: a list of links displayed on the fixed position navigation bar. Each link element is a tuple with the format `(link value, link title, link href, icon class) e.g.:
+NIUX2_HEADER_SECTIONS is a list of links displayed on the fixed position navigation bar. Each link element is a tuple with the format `(link value, link title, link href, icon class)` e.g.:
 
     NIUX2_HEADER_SECTIONS = [ 
          ("关于", "about", "/about.html", "icon-anchor"),
@@ -74,7 +74,7 @@ NIUX2_HEADER_SECTIONS: a list of links displayed on the fixed position navigatio
          ("标签", "tags", "/tag/", "icon-tag"),
     ]
 
-NIUX2_HEADER_DROPDOWN_SECTIONS: a dict of dropdown menu. The dict key is a tuple with the format `(display name, icon class)`, and the corresponding value is actually a `NIUX2_HEADER_SECTIONS` list, e.g.:
+NIUX2_HEADER_DROPDOWN_SECTIONS is a dictionary of dropdown menu. The key is a tuple with the format `(display name, icon class)`, and the corresponding value is actually a `NIUX2_HEADER_SECTIONS` list, e.g.:
 
     NIUX2_HEADER_DROPDOWN_SECTIONS = [
         ("custom drop down", "icon-archive"): [
@@ -88,7 +88,7 @@ NIUX2_HEADER_DROPDOWN_SECTIONS: a dict of dropdown menu. The dict key is a tuple
 
 ### Footer icons
 
-NIUX2_FOOTER_ICONS: a list of icon links shown in the footer section, floated right. Each element follows the format `(icon class, link title, link href)`, e.g.:
+NIUX2_FOOTER_ICONS is a list of icon links shown in the footer section, floated right. Each element follows the format `(icon class, link title, link href)`, e.g.:
 
     NIUX2_FOOTER_ICONS = [
          ("icon-envelope-alt", "my email address", "mailto: wilbur.ma@foxmail.com"),
