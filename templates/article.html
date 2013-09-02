@@ -6,10 +6,10 @@
     <div class="niu2-article">
         <div class="niu2-meta">
             <span class="niu2-meta-category pull-left">
-            {% if MY_CATEGORY_MAP %}
-                <i class="{{ MY_CATEGORY_MAP[article.category][1] }}"></i>
+            {% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] %}
+                <i class="{{ NIUX2_CATEGORY_MAP[article.category][1] }}"></i>
                 <a href="{{ SITEURL }}/{{ article.category.url }}">
-                    {{ MY_CATEGORY_MAP[article.category][0] }}
+                    {{ NIUX2_CATEGORY_MAP[article.category][0] }}
                 </a>
             {% else %}
                 <i class="icon-open-folder"></i>

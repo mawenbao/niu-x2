@@ -1,8 +1,8 @@
 {% extends "index.html" %}
 
-{% if MY_CATEGORY_MAP %}
-    {% set my_cat = MY_CATEGORY_MAP[category][0] %}
-    {% set my_cat_icon = MY_CATEGORY_MAP[category][1] %}
+{% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[category] %}
+    {% set my_cat = NIUX2_CATEGORY_MAP[category][0] %}
+    {% set my_cat_icon = NIUX2_CATEGORY_MAP[category][1] %}
 {% else %}
     {% set my_cat = category %}
     {% set my_cat_icon = "icon-folder-open" %}
