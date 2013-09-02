@@ -38,10 +38,11 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 *  Collapsible monthly archives.
 *  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
 *  Fixed position navigation bar.
-*  Show toc(table of contents) on navigation bar with the [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
+*  TOC(table of contents) in navigation bar with the [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
 *  Categories show in a dropdown menu on the header bar.
 *  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
-*  Define your own dropdown menu, footer links or footer icons through pelican configuration with font-awesome icons.
+*  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
+*  Translations through pelican configuration.
 
 ## TODO
 
@@ -71,7 +72,7 @@ Note that:
 
 `NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search" by default. 
 
-The search box is 150px wide by default. You can adjust width of the search box in the `custom.css` file like this:
+The search box is 150px wide by default. You can adjust it in the `custom.css` file like this:
 
     input.niu2-cse-header {
         width: 200px !important;
@@ -85,7 +86,7 @@ Currently, there is not a search result template in this theme, so I suggest tha
 
 ### Category aliases
 
-`NIUX2_CATEGORY_MAP` is a dictionary of category aliases, of which each item follows the format `original name: ("display name", "icon class")`, if you do not want a icon, just leave the icon class empty. e.g.:
+`NIUX2_CATEGORY_MAP` is a dictionary of category aliases, of which each item follows the format `original name: (display name, icon class)`, if you do not want a icon, just leave the icon class empty. e.g.:
 
     NIUX2_CATEGORY_MAP = {
         "code": ("代码", "icon-code")
