@@ -14,7 +14,7 @@ You can check out my blog [atime.me](http://atime.me) for a live demo.
 
 ## Usage
 
-If you are hosting your pelican site locally, please remeber to set the `SITEURL` variable to empty in your pelican configuration, otherwise the theme will not be able to find the css and js static files correctly. 
+If you are hosting your pelican site locally, please remeber to set the `SITEURL` variable empty in your pelican configuration, otherwise the theme will not be able to find the css and js static files correctly. 
 
 For more theme related configurations, please refer to `Theme settings` section below.
 
@@ -57,11 +57,11 @@ NIUX2_PAGINATOR_LENGTH, default is 11.
 
 ### Category aliases
 
-NIUX2_CATEGORY_MAP: a dict of category aliases, of which each item follows the format `orig name: ("display name", "icon class")`, e.g.:
+NIUX2_CATEGORY_MAP: a dict of category aliases, of which each item follows the format `orig name: ("display name", "icon class")`, if you do not want a icon, just leave the icon class empty. e.g.:
 
     NIUX2_CATEGORY_MAP = {
         "code": ("代码", "icon-code")
-        "note": ("笔记", "icon-book"),
+        "note": ("笔记", ""),
     }
 
 ### Navigation bar
