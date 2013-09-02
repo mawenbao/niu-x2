@@ -109,6 +109,5 @@ NIUX2_FOOTER_ICONS is a list of icon links shown in the footer section, floated 
 *  NIUX2_PAGINATOR_LENGTH: int(default 11), the length of your pagination bar
 *  NIUX2_FAVICON_URL: string(default "/favicon.png"), your favicon url
 *  NIUX2_HEADER_TOC_NAME: string(default "TOC"), display name of your category dropdown menu
-*  NIUX2_PAGINATOR_LENGTH: int(default 11), length of your pagination bar
 *  NIUX2_FOOTER_LINKS: a `NIUX2_HEADER_SECTIONS` format list shown right after your copyright info in the footer section.
 
