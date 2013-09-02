@@ -83,20 +83,16 @@
 		<!-- google custom search -->
 		{% if NIUX2_GOOGLE_CSE_ID %}
 			<div class="navbar-form navbar-right">
-            	<script>
-				  (function() {
-				    var cx = '{{ NIUX2_GOOGLE_CSE_ID }}';
-				    var gcse = document.createElement('script');
-				    gcse.type = 'text/javascript';
-				    gcse.async = true;
-				    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-				        '//www.google.com/cse/cse.js?cx=' + cx;
-				    var s = document.getElementsByTagName('script')[0];
-				    s.parentNode.insertBefore(gcse, s);
-				  })();
-				</script>
-				<gcse:searchbox-only></gcse:searchbox-only>
-          </div>
+            	<form id="cse-search-box" action="http://google.com/cse">
+                    <input type="hidden" name="cx" value="{{ NIUX2_GOOGLE_CSE_ID }}" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <div class="form-group">
+                        <i class="icon-search pull-right"></i>
+                        <input id="niu2-cse-header-box" class="form-control" 
+                            type="text" name="q" size="31" placeholder="{{ NIUX2_SEARCH_PLACEHOLDER_NAME }}" />
+                    </div>
+                </form>
+           </div>
 		{% endif %}
 		</ul>
 	</nav>

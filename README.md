@@ -43,10 +43,18 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 ## TODO
 
 1. Integrate google custom search into the theme.
+2. Better SEO support.
 
 ## Custom css
 
 You can define custom css codes in `niu-x2/static/css/custom.css`, and they will be available to all the templates.
+
+## Global pelican settings
+
+Currently the following pelican configuration variables are supported:
+
+*  DISQUS_SITENAME
+*  GOOGLE_ANALYTICS
 
 ## Theme settings
 

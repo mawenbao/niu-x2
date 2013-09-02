@@ -12,6 +12,18 @@
 	margin-bottom: 20px;
 }
 
+#niu2-cse-header-box {
+    max-height: 22px;
+    margin-top: 6.5px;
+    width: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#niu2-cse-header-box:before {
+    content: "\25AE";
+}
+
 /*
 .niu2-index-article a:hover {
 	text-decoration: none;
