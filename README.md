@@ -38,8 +38,8 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 *  Collapsible monthly archives.
 *  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
 *  Fixed position navigation bar.
-*  TOC(table of contents) in navigation bar with the [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
-*  Categories show in a dropdown menu on the header bar.
+*  TOC(table of contents) in navigation bar with the help of [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
+*  Categories shown in a dropdown list.
 *  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
 *  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
 *  Translations through pelican configuration.
