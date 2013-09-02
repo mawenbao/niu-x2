@@ -8,9 +8,9 @@
     {% set my_cat_icon = "icon-folder-open" %}
 {% endif %}
 
-{% block title %}分类 {{ my_cat }} | {{ super() }}{% endblock %}
+{% block title %}{{ NIUX2_CATEGORY_NAME | default("Category") }} {{ my_cat }} | {{ super() }}{% endblock %}
 
-{% block index_title %}分类 {{ my_cat }}{% endblock %}
+{% block index_title %}{{ NIUX2_CATEGORY_NAME | default("Category") }} {{ my_cat }}{% endblock %}
 
 {% block content_header %}
 

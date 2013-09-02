@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %} 存档 | {{ super() }} {% endblock %}
+{% block title %}{{ NIUX2_ARCHIVE_NAME | default("Archive") }} | {{ super() }} {% endblock %}
 {% block content %}
 <div class="niu2-page">
-	<h1>存档</h1>
+	<h1>{{ NIUX2_ARCHIVE_NAME | default("Archive") }}</h1>
 	<ul>
 	   {% for article in articles %}
            {% if loop.first or article.date.strftime('%Y %m') != articles[loop.index0-1].date.strftime('%Y %m') %}
@@ -13,7 +13,7 @@
 	       <ul id="arc-{{ currArcDate }}" class="collapse {{ 'in' if loop.first else 'out' }}">
 		   {% endif %}
 	       <li>
-	           <a href="{{ SITEURL }}/{{ article.url }}" title="分类 {{ article.category }}">
+	           <a href="{{ SITEURL }}/{{ article.url }}" title="{{ NIUX2_CATEGORY_NAME | default("Category") }} {{ article.category }}">
                    {{ article.html_h1 | default(article.title) }}
 	           </a>
 	       </li>

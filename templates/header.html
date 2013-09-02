@@ -19,16 +19,16 @@
 		{% endfor %}
 		{% else %}
 		<li><a href="{{ SITEURL }}/{{ ARCHIVE_SAVE_AS | default('archives.html') }}">
-                <i class="icon-archive"></i> 存档</a>
+                <i class="icon-archive"></i> {{ NIUX2_ARCHIVE_NAME | default("Archive") }}</a>
 		</li>
 		<li><a href="{{ SITEURL }}/{{ TAGS_SAVE_AS | default('tags.html') }}">
-                <i class="icon-tag"></i> 标签</a>
+                <i class="icon-tag"></i> {{ NIUX2_TAG_NAME | default("Tag") }}</a>
 		</li>
 		{% endif %}
 		<!-- category dropdown list -->
 		<li class="dropdown">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>分类<b class="caret"></b>
+                <i class="icon-folder-open"></i>{{ NIUX2_CATEGORY_NAME | default("Category") }}<b class="caret"></b>
            </a>
            <ul class="dropdown-menu">
                {% for cat, article_list in categories %}
@@ -63,22 +63,21 @@
 		{% endfor %}
         {% endif %}
 		<!--  table of contents of page or article -->
-		{% if page or article %}
-           {% if page and page.html_doc %}
-           <li class="dropdown dropdown-toc">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               <i class="icon-list-ul"></i>
-                   {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
-               </a>
-               {{ page.html_h1 }}
-           {% elif article and article.html_toc %}
-           <li class="dropdown dropdown-toc">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                   <i class="icon-list-ul"></i>
-                   {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
-               </a>
-               {{ article.html_h1 }}
-           {% endif %}
+        {% if page and page.html_toc %}
+        <li class="dropdown dropdown-toc">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="icon-list-ul"></i>
+                {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
+            </a>
+            {{ page.html_toc }}
+        </li>
+        {% elif article and article.html_toc %}
+        <li class="dropdown dropdown-toc">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-list-ul"></i>
+                {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
+            </a>
+            {{ article.html_toc }}
         </li>
         {% endif %}
 		<!-- google custom search -->

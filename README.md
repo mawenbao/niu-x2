@@ -10,11 +10,13 @@ BSD 3-Clause License. Please see LICENSE.txt for more details.
 
 ## Demo
 
-You can see my demo blog [atime.me](http://atime.me).
+You can check out my blog [atime.me](http://atime.me) for a live demo.
 
 ## Usage
 
-For more configurations, see `Theme settings` section below.
+If you are hosting your pelican site locally, please remeber to set the `SITEURL` variable to empty in your pelican configuration, otherwise the theme will not be able to find the css and js static files correctly. 
+
+For more theme related configurations, please refer to `Theme settings` section below.
 
 First clone my theme:
 
@@ -41,7 +43,6 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 ## TODO
 
 1. Integrate google custom search into the theme.
-2. Better readme.
 
 ## Theme settings
 
@@ -55,6 +56,7 @@ Note that:
 NIUX2_PAGINATOR_LENGTH, default is 11.
 
 ### Category aliases
+
 NIUX2_CATEGORY_MAP: a dict of category aliases, of which each item follows the format `orig name: ("display name", "icon class")`, e.g.:
 
     NIUX2_CATEGORY_MAP = {
@@ -93,6 +95,14 @@ NIUX2_FOOTER_ICONS: a list of icon links shown in the footer section, floated ri
          ("icon-github-alt", "my github page", "http://github.com/wilbur-ma"),
          ("icon-rss", "subscribe my blog via rss", "http://atime.me/feed.xml"),
          ]
+
+### Translation settings
+
+*  NIUX2_TAG_NAME: string(default "Tag"), translation of tag
+*  NIUX2_ARCHIVE_NAME: string(default "Archive"), translation of archive
+*  NIUX2_CATEGORY_NAME: string(default "Category"), translation of category
+*  NIUX2_TAG_CLEAR_NAME: string(default, "clear"), name of clear button on the tags page
+*  NIUX2_TAG_FILTER_NAME: string(default, "filter tags"), placeholder of the tag_filter input on the tags page
 
 ### Misc settings
 

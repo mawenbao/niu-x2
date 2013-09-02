@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %} 分类 | {{ super() }}{% endblock title %}
+{% block title %} {{ NIUX2_CATEGORY_NAME | default("Category") }} | {{ super() }}{% endblock title %}
 
 {%- block content %}
     <div class="niu2-page">
-      <h1>分类</h1>
+      <h1>{{ NIUX2_CATEGORY_NAME | default("Category") }}</h1>
       <ul id="category-list">
       {% for category, n in categories %}
       <li><a href="{{ SITEURL }}/{{ category.url }}">
