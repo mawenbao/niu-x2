@@ -44,6 +44,10 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
 1. Integrate google custom search into the theme.
 
+## Custom css
+
+You can define custom css codes in `niu-x2/static/css/custom.css`, and they will be available to all the templates.
+
 ## Theme settings
 
 Note that:
