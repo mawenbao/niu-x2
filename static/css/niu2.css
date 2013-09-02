@@ -13,15 +13,17 @@
 }
 
 #niu2-cse-header-box {
-    max-height: 22px;
-    margin-top: 6.5px;
-    width: 120px;
-    padding-left: 5px;
-    padding-right: 5px;
+    margin-left: 30px;	
 }
 
-#niu2-cse-header-box:before {
-    content: "\25AE";
+.niu2-cse-header {
+    max-height: 20px;
+    margin-top: 7px;
+    padding: 0 3px;
+}
+
+input.niu2-cse-header {
+	width: 150px;
 }
 
 /*
@@ -34,13 +36,13 @@
 */
 
 .niu2-index-date {
-    width: 40%;
+    width: 30%;
 }
 
 .niu2-index-article {
 	font-size: 16px;
-	margin: 5px 5px 5px 0;
-	width: 60%;
+	margin: 7px 0;
+	width: 70%;
 }
 
 a.niu2-toggle-ctrl {
@@ -60,8 +62,11 @@ a.niu2-toggle-ctrl:hover {
 
 .niu2-footer {
     clear: both;
-    padding-top: 10px;
-    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.niu2-footer hr {
+	margin: 15px 0;
 }
 
 .niu2-footer p {
@@ -75,18 +80,6 @@ a.niu2-toggle-ctrl:hover {
 
 .niu2-icons a {
     text-decoration: none;	
-}
-
-.niu2-meta {
-	margin-bottom: 40px;
-}
-
-.niu2-meta a {
-	color: #333333;
-}
-
-.niu2-meta-tag {
-    padding-left: 10px;	
 }
 
 #niu2-tagcloud {
@@ -149,26 +142,55 @@ a.niu2-toggle-ctrl:hover {
 }
 
 .niu2-page {
-	padding-top: 15px;
+	padding-top: 30px;
 }
 
 .niu2-article {
-	padding-top: 30px;
+	padding-top: 45px;
+}
+
+.niu2-meta {
+    margin-bottom: 35px;
+}
+
+.niu2-meta a {
+    color: #333333;
+}
+
+.niu2-meta-tag {
+    padding-left: 10px; 
 }
 
 /* fix headings covered by fixed header problem */
 h1:before, h2:before, h3:before,
 h4:before, h5:before, h6:before {
-	display:block;
-    content:"";
-    height:35px;
-    margin:-35px 0 0;
+	display: block;
+    content: "";
+    height: 45px;
+    margin: -45px 0 0;
 }
 
 @media (max-width: 767px) {
 
 .dropdown-toc > .dropdown-menu > li > a {
     padding: 5px 10px 5px 10px !important;
+}
+
+button.niu2-cse-header {
+    display: none;
+}
+
+input.niu2-cse-header {
+	margin-left: 5px;
+}
+
+.niu2-index-date {
+	display: none;
+}
+
+#niu2-cse-header-box {
+    margin-left: -15px;
+    padding-left: 0;  
 }
 
 }

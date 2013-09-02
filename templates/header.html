@@ -1,4 +1,5 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="col-md-8 col-md-offset-2">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -19,16 +20,16 @@
 		{% endfor %}
 		{% else %}
 		<li><a href="{{ SITEURL }}/{{ ARCHIVE_SAVE_AS | default('archives.html') }}">
-                <i class="icon-archive"></i> {{ NIUX2_ARCHIVE_NAME | default("Archive") }}</a>
+                <i class="icon-archive"></i> {{ NIUX2_ARCHIVE_TRANSL | default("Archive") }}</a>
 		</li>
 		<li><a href="{{ SITEURL }}/{{ TAGS_SAVE_AS | default('tags.html') }}">
-                <i class="icon-tag"></i> {{ NIUX2_TAG_NAME | default("Tag") }}</a>
+                <i class="icon-tag"></i> {{ NIUX2_TAG_TRANSL | default("Tag") }}</a>
 		</li>
 		{% endif %}
 		<!-- category dropdown list -->
 		<li class="dropdown">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-folder-open"></i>{{ NIUX2_CATEGORY_NAME | default("Category") }}<b class="caret"></b>
+                <i class="icon-folder-open"></i>{{ NIUX2_CATEGORY_TRANSL | default("Category") }}<b class="caret"></b>
            </a>
            <ul class="dropdown-menu">
                {% for cat, article_list in categories %}
@@ -67,7 +68,7 @@
         <li class="dropdown dropdown-toc">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <i class="icon-list-ul"></i>
-                {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
+                {{ NIUX2_HEADER_TOC_TRANSL | default("TOC") }}<b class="caret"></b>
             </a>
             {{ page.html_toc }}
         </li>
@@ -75,25 +76,27 @@
         <li class="dropdown dropdown-toc">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="icon-list-ul"></i>
-                {{ NIUX2_HEADER_TOC_NAME | default("TOC") }}<b class="caret"></b>
+                {{ NIUX2_HEADER_TOC_TRANSL | default("TOC") }}<b class="caret"></b>
             </a>
             {{ article.html_toc }}
         </li>
         {% endif %}
-		<!-- google custom search -->
-		{% if NIUX2_GOOGLE_CSE_ID %}
-			<div class="navbar-form navbar-right">
-            	<form id="cse-search-box" action="http://google.com/cse">
-                    <input type="hidden" name="cx" value="{{ NIUX2_GOOGLE_CSE_ID }}" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <div class="form-group">
-                        <i class="icon-search pull-right"></i>
-                        <input id="niu2-cse-header-box" class="form-control" 
-                            type="text" name="q" size="31" placeholder="{{ NIUX2_SEARCH_PLACEHOLDER_NAME }}" />
-                    </div>
-                </form>
-           </div>
-		{% endif %}
 		</ul>
+		<!-- google custom search -->
+        {% if NIUX2_GOOGLE_CSE_ID %}
+        <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+            <form action="http://google.com/cse">
+                <input type="hidden" name="cx" value="{{ NIUX2_GOOGLE_CSE_ID }}" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <div class="form-group">
+                    <input class="niu2-cse-header form-control" 
+                        type="text" name="q" 
+                        placeholder="{{ NIUX2_SEARCH_PLACEHOLDER_TRANSL | default('Press enter to search') }}"/>
+                </div>
+                
+            </form>
+       </div>
+       {% endif %}
 	</nav>
+</div>
 </div>
