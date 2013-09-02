@@ -125,13 +125,12 @@ a.niu2-toggle-ctrl:hover {
 }
 
 .dropdown-toc > ul {
-    width: 250px;
+    min-width: 200px;
 }
 
 .dropdown-toc > .dropdown-menu ul {
     padding-left: 10px;
 }
-
 
 .dropdown-toc > .dropdown-menu > li > a {
     padding-left: 10px;
