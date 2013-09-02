@@ -82,7 +82,7 @@ The css codes above will set the width of your search box to 200px.
 
 #### Limitations
 
-Currently, there is not a search result template in this theme, so I suggest that you display the search results in a Google-hosted page. 
+Currently, there is not a search result page in this theme, so I suggest that you display the search results in a Google-hosted page. 
 
 ### Category aliases
 
@@ -139,5 +139,6 @@ Currently, there is not a search result template in this theme, so I suggest tha
 
 *  `NIUX2_PAGINATOR_LENGTH` int(default 11), the length of your pagination bar
 *  `NIUX2_FAVICON_URL` string(default "/favicon.png"), your favicon url
-*  `NIUX2_FOOTER_LINKS` a `NIUX2_HEADER_SECTIONS` format list shown right after your copyright info in the footer section.
+*  `NIUX2_FOOTER_LINKS` a `NIUX2_HEADER_SECTIONS` format list shown right after your copyright info in the footer section
+*  `NIUX2_DISPLAY_TITLE` boolean(default True), whether to display the title of article and page
 
