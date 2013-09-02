@@ -120,8 +120,7 @@ a.niu2-toggle-ctrl:hover {
 }
 
 .dropdown-toc .dropdown-menu {
-	width: 320%;
-	max-height: 1000%;
+	max-height: 500px;
 	overflow: auto;
 }
 
