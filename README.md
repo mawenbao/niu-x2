@@ -38,7 +38,7 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 *  Collapsible monthly archives.
 *  Define your own dropdown menu, footer links or footer icons through pelican configuration with font-awesome icons.
 *  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
-*  Auto-generated copyright year range, which is actually from the year your first article to the year of your lastest one.
+*  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
 
 ## TODO
 
@@ -48,12 +48,8 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
 Note that:
 
-*  All the following theme configuration variables should be optional.
+*  All the following theme configuration variables are optional.
 *  All the icons come from font awesome. You can find the icon class name [here](http://fortawesome.github.io/Font-Awesome/icons/).
-
-### Pagination bar length
-
-NIUX2_PAGINATOR_LENGTH, default is 11.
 
 ### Category aliases
 
@@ -106,6 +102,7 @@ NIUX2_FOOTER_ICONS: a list of icon links shown in the footer section, floated ri
 
 ### Misc settings
 
+*  NIUX2_PAGINATOR_LENGTH: int(default 11), the length of your pagination bar
 *  NIUX2_FAVICON_URL: string(default "/favicon.png"), your favicon url
 *  NIUX2_HEADER_TOC_NAME: string(default "TOC"), display name of your category dropdown menu
 *  NIUX2_PAGINATOR_LENGTH: int(default 11), length of your pagination bar
