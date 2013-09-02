@@ -13,7 +13,7 @@
 }
 
 #niu2-cse-header-box {
-    margin-left: 30px;	
+    margin-left: 10px;	
 }
 
 .niu2-cse-header {
@@ -23,7 +23,7 @@
 }
 
 input.niu2-cse-header {
-	width: 150px;
+	width: 100px;
 }
 
 /*
@@ -172,6 +172,14 @@ h4:before, h5:before, h6:before {
 
 @media (max-width: 767px) {
 
+#niu2-cse-header-box {
+    margin-left: -15px;
+    padding-left: 0;
+}
+
+}
+@media (max-width: 768px) {
+
 .dropdown-toc > .dropdown-menu > li > a {
     padding: 5px 10px 5px 10px !important;
 }
@@ -186,11 +194,6 @@ input.niu2-cse-header {
 
 .niu2-index-date {
 	display: none;
-}
-
-#niu2-cse-header-box {
-    margin-left: -15px;
-    padding-left: 0;  
 }
 
 }

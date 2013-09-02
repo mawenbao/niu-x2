@@ -1,5 +1,5 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-12 col-md-offset-2">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -84,14 +84,14 @@
 		</ul>
 		<!-- google custom search -->
         {% if NIUX2_GOOGLE_CSE_ID %}
-        <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
+        <div id="niu2-cse-header-box" class="navbar-form navbar-nav navbar-left">
             <form action="http://google.com/cse">
                 <input type="hidden" name="cx" value="{{ NIUX2_GOOGLE_CSE_ID }}" />
                 <input type="hidden" name="ie" value="UTF-8" />
                 <div class="form-group">
                     <input class="niu2-cse-header form-control" 
                         type="text" name="q" 
-                        placeholder="{{ NIUX2_SEARCH_PLACEHOLDER_TRANSL | default('Press enter to search') }}"/>
+                        placeholder="{{ NIUX2_SEARCH_PLACEHOLDER_TRANSL | default('Search ...') }}"/>
                 </div>
                 
             </form>
