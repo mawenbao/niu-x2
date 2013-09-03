@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/niu2.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/custom.css" type="text/css" />
+    <script type="text/javascript" src="/theme/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/theme/js/niu2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#niu2-cse-ctrl-box").click(showCSE);
+            $("#niu2-cse-ctrl-box").focus(showCSE);
+            $("#niu2-cse-search-input").hide();
+            $("#niu2-cse-search-input").focusout(hideCSE);
+            $(document).keyup(function(e) {
+                e = e || window.event;
+                if (e.keyCode == 27) {
+                    hideCSE();
+                }
+            });
+        })
+    </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="{{ SITEURL }}/theme/js/html5shiv.js"></script>
@@ -49,10 +65,8 @@
     {% endif %}
     
     {% block additional_js %}
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/theme/js/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/theme/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
     {% endblock additional_js %}
   </body>
 </html>

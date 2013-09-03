@@ -14,6 +14,22 @@ BSD 3-Clause License. Please see LICENSE.txt for more details.
 
 You can check out my blog [atime.me](http://atime.me) for a live demo.
 
+## Features
+
+*  Bootstrap3.0.0, font-awesome3.2.1 and jQuery1.10 included.
+*  Responsive(should be). 
+*  Disqus, google analytics and google custom search support.
+*  Pagination bar with customizable length. 
+*  Tagcloud implemented with [tagcloud.js](https://code.google.com/p/tagcloud) which supports incremental search.
+*  Collapsible monthly archives.
+*  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
+*  Fixed position navigation bar.
+*  TOC(table of contents) in navigation bar with the help of [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
+*  Categories shown in a dropdown list.
+*  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
+*  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
+*  Translations through pelican configuration.
+
 ## Usage
 
 If you are hosting your pelican site locally, please remeber to set the `SITEURL` variable empty in your pelican configuration, otherwise the theme will not be able to find the css and js static files correctly. 
@@ -28,22 +44,6 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
     THEME = ~/repo/niu-x2
 
-## Features
-
-*  Bootstrap3.0.0 and font-awesome3.2.1 included.
-*  Responsive(should be). 
-*  Disqus, google analytics and google custom search support.
-*  Pagination bar with customizable length. 
-*  Tagcloud implemented with [tagcloud.js](https://code.google.com/p/tagcloud) which supports incremental search.
-*  Collapsible monthly archives.
-*  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
-*  Fixed position navigation bar.
-*  TOC(table of contents) in navigation bar with the help of [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
-*  Categories shown in a dropdown list.
-*  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
-*  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
-*  Translations through pelican configuration.
-
 ## TODO
 
 1. Better SEO support.
@@ -52,8 +52,8 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
 Currently the following pelican configuration variables are supported:
 
-*  DISQUS_SITENAME
-*  GOOGLE_ANALYTICS
+*  `DISQUS_SITENAME` is your disqus site ID.
+*  `GOOGLE_ANALYTICS` is your Google analytics ID.
 
 ## Custom css
 
@@ -70,13 +70,8 @@ Note that:
 
 `NIUX2_GOOGLE_CSE_ID` is your your google custom [search engine id](http://support.google.com/customsearch/bin/answer.py?hl=en&answer=2649143).
 
-`NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search" by default. 
-
-The search box is 150px wide by default. You can adjust it in the `custom.css` file like this:
-
-    input.niu2-cse-header {
-        width: 200px !important;
-    }
+`NIUX2_SEARCH_TRANSL` is the search text displayed in header bar, which is "Search" by default.
+`NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search ..." by default. 
 
 The css codes above will set the width of your search box to 200px.
 
@@ -133,7 +128,8 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_TAG_CLEAR_TRANSL` string(default "clear"), name of clear button on the tags page
 *  `NIUX2_TAG_FILTER_TRANSL` string(default "filter tags"), placeholder of the tag_filter input on the tags page
 *  `NIUX2_HEADER_TOC_TRANSL` string(default "TOC"), name of the categories dropdown menu
-*  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search"), placeholder of the header search box
+*  `NIUX2_SEARCH_TRANSL` string(default "Search"), name displayed for google cse in the header bar
+*  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search ..."), placeholder of the header search box
 
 ### Misc settings
 
