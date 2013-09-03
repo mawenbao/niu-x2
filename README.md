@@ -66,10 +66,18 @@ Note that:
 *  All the following theme configuration variables are optional.
 *  All the icons come from font awesome. You can find the icon class name [here](http://fortawesome.github.io/Font-Awesome/icons/).
 
+### Pygments theme
+
+First make sure you have enabled the `codehilite` markdown extension(pelican enables it by default). Then you can pick you favorite theme
+in the `static/css/pygments` folder. Currently all the theme css files come from the [pygments-css](https://github.com/richleland/pygments-css) repository. At last you should set the `NIUX2_PYGMENTS_THEME` variable to the file name of the theme with no .css extension at the end. For example:
+
+    NIUX2_PYGMENTS_THEME = 'borland'
+
+If `NIUX2_PYGMENTS_THEME` is not set, niu-x2 uses `github` theme by default.
+
 ### Google custom search engine
 
 `NIUX2_GOOGLE_CSE_ID` is your your google custom [search engine id](http://support.google.com/customsearch/bin/answer.py?hl=en&answer=2649143).
-
 `NIUX2_SEARCH_TRANSL` is the search text displayed in header bar, which is "Search" by default.
 `NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search ..." by default. 
 
