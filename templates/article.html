@@ -28,7 +28,7 @@
                 <i class="icon-calendar"></i> {{ article.locale_date }}
             </span>
 	    </div>
-	    {% if NIUX2_DISPLAY_TITLE is not defined or not NIUX2_DISPLAY_TITLE %}
+	    {% if NIUX2_DISPLAY_TITLE is not defined or NIUX2_DISPLAY_TITLE %}
 	        <h1>{{ article.title }}</h1>
 	    {% endif %}
         {{ article.content }}

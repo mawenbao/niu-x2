@@ -12,6 +12,10 @@
 	margin-bottom: 20px;
 }
 
+#niu2-cse-wrapper {
+    padding-right: 15px;
+}
+
 #niu2-cse-header-box {
     position: absolute;
     margin-top: 3.5px;
@@ -88,6 +92,10 @@ a.niu2-toggle-ctrl:hover {
 
 .niu2-icons a {
     text-decoration: none;	
+}
+
+ul#niu2-archives {
+  padding-left: 0;  
 }
 
 #niu2-tagcloud {
@@ -210,6 +218,10 @@ h4:before, h5:before, h6:before {
 
 #niu2-cse-search-text {
     display: none;
+}
+
+.dropdown-toc a {
+    color: #999999;
 }
 
 @media (max-height: 300px) {
