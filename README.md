@@ -1,8 +1,8 @@
 # Niu-X2
 
-Niu-X2 is a responsive theme for pelican, built with bootstrap3 and font-awesome. This
-theme is implemented in a hurry and I am pretty new to bootstrap and jinja2, so the codes
-look messy and may be bugy. If you find any bugs, please let me know.
+Niu-X2 is a responsive theme for pelican, built with bootstrap3 and font-awesome.
+
+As I am pretty new to bootstrap and jinja2, the codes look messy and may be buggy. If you find any bugs, please let me know.
 
 ## License
 
