@@ -28,6 +28,7 @@ You can check out my blog [atime.me](http://atime.me) for a live demo.
 *  Categories shown in a dropdown list.
 *  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
 *  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
+*  Custom 404 page.
 *  Translations through pelican configuration.
 
 ## Usage
@@ -46,8 +47,7 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
 ## TODO
 
-1. Custom 404 page.
-2. Better SEO support.
+1. Better SEO support.
 
 ## Global pelican settings
 
@@ -66,6 +66,17 @@ Note that:
 
 *  All the following theme configuration variables are optional.
 *  All the icons come from font awesome. You can find the icon class name [here](http://fortawesome.github.io/Font-Awesome/icons/).
+
+### Custom 404
+
+*  `NIUX2_404_TITLE_TRANSL` string(default "ERROR 404 Page Not Found!"), title of the 404 page
+*  `NIUX2_404_INFO_TRANSL` string(default "The requested url was not found!"), warning infomation on the 404 page
+
+You should add the following setting to your pelican configuration.
+
+    TEMPLATE_PAGES = {
+        "404.html": "404.html",
+    }
 
 ### Pygments theme
 
@@ -131,6 +142,8 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 
 ### Translation settings
 
+*  `NIUX2_404_TITLE_TRANSL` string(default "ERROR 404 Page Not Found!"), title of the 404 page
+*  `NIUX2_404_INFO_TRANSL` string(default "The requested url was not found!"), warning infomation on the 404 page
 *  `NIUX2_TAG_TRANSL` string(default "Tag"), translation of tag
 *  `NIUX2_ARCHIVE_TRANSL` string(default "Archive"), translation of archive
 *  `NIUX2_CATEGORY_TRANSL` string(default "Category"), translation of category

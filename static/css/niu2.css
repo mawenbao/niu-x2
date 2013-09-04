@@ -4,6 +4,17 @@
  * @nav-link-padding: 7px
  */
 
+.niu2-404-info-bigger {
+    margin-top: 30px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.niu2-404-info {
+    font-size: 50px;
+    text-align: center;
+}
+
 #disqus_thread {
 	margin-top: 30px;
 }
