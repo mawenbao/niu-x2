@@ -81,10 +81,12 @@
             {{ article.html_toc }}
         </li>
         {% endif %}
-		</ul>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
 		<!-- google custom search -->
         {% if NIUX2_GOOGLE_CSE_ID %}
-        <div id="niu2-cse-wrapper" class="navbar-nav navbar-right">
+        <li>
+        <div id="niu2-cse-wrapper">
             <div id="niu2-cse-header-box" class="navbar-form navbar-nav">
                 <form action="http://google.com/cse">
                     <input type="hidden" name="cx" value="{{ NIUX2_GOOGLE_CSE_ID }}" />
@@ -101,7 +103,9 @@
             <span id="niu2-cse-search-text">{{ NIUX2_SEARCH_TRANSL | default("Search") }}</span>
            </div>
        </div>
+       </li>
        {% endif %}
+       </ul>
 	</nav>
 </div>
 </div>
