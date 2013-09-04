@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %}{{ NIUX2_ARCHIVE_TRANSL | default("Archive") }} | {{ super() }} {% endblock %}
+{% block title %}{{ NIUX2_ARCHIVE_TRANSL | default("Archives") }} - {{ super() }} {% endblock %}
 {% block content %}
 <div class="niu2-page">
-	<h1><i class="icon-archive"></i> {{ NIUX2_ARCHIVE_TRANSL | default("Archive") }}</h1>
+	<h1><i class="icon-archive"></i> {{ NIUX2_ARCHIVE_TRANSL | default("Archives") }}</h1>
 	<div id="niu2-archives">
 	   {% for article in articles %}
            {% if loop.first or article.date.strftime('%Y %m') != articles[loop.index0-1].date.strftime('%Y %m') %}

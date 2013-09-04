@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} {{ article.html_h1 | default(article.title) }} | {{ super() }} {% endblock %}
+{% block title %} {{ article.html_h1 | default(article.title) }} - {{ super() }} {% endblock %}
 
 {% block content %}
     <div class="niu2-article">

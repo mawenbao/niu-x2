@@ -8,7 +8,7 @@
     {% set my_cat_icon = "icon-folder-open" %}
 {% endif %}
 
-{% block title %}{{ NIUX2_CATEGORY_TRANSL | default("Category") }} {{ my_cat }} | {{ super() }}{% endblock %}
+{% block title %}{{ NIUX2_CATEGORY_TRANSL | default("Category") }} {{ my_cat }} - {{ super() }}{% endblock %}
 
 {% block index_title %}{{ NIUX2_CATEGORY_TRANSL | default("Category") }} {{ my_cat }}{% endblock %}
 

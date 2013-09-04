@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 
-{% block title %}{{ super() }} — Tag {{ tag }}{% endblock %}
+{% block title %}{{ NIUX2_TAG_TRANSL | default("Tag") }} {{ tag }} - {{ super() }}{% endblock %}
 
 {% block content_header %}
 
