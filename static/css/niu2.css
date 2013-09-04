@@ -12,10 +12,6 @@
 	margin-bottom: 20px;
 }
 
-#niu2-cse-wrapper {
-    padding-right: 15px;
-}
-
 #niu2-cse-header-box {
     position: absolute;
     margin-top: 3.5px;
@@ -186,7 +182,7 @@ h4:before, h5:before, h6:before {
     margin: -45px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
 .dropdown-toc > .dropdown-menu > li > a {
     padding: 5px 10px 5px 10px !important;
@@ -194,6 +190,11 @@ h4:before, h5:before, h6:before {
 
 .niu2-index-date {
 	display: none;
+}
+
+#niu2-cse-wrapper {
+    padding-bottom: 10px;
+    width: 140px;
 }
 
 #niu2-cse-header-box {
@@ -206,7 +207,7 @@ h4:before, h5:before, h6:before {
     width: 150px;
     position: absolute;
     margin-left: -3px;
-    margin-top: -9px;
+    margin-top: -12px;
 }
 
 #niu2-cse-ctrl-box {
@@ -222,6 +223,8 @@ h4:before, h5:before, h6:before {
 
 .dropdown-toc a {
     color: #999999;
+}
+
 }
 
 @media (max-height: 300px) {
