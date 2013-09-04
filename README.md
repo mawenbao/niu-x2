@@ -46,7 +46,8 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 
 ## TODO
 
-1. Better SEO support.
+1. Custom 404 page.
+2. Better SEO support.
 
 ## Global pelican settings
 
@@ -77,9 +78,9 @@ If `NIUX2_PYGMENTS_THEME` is not set, niu-x2 uses `github` theme by default.
 
 ### Google custom search engine
 
-`NIUX2_GOOGLE_CSE_ID` is your your google custom [search engine id](http://support.google.com/customsearch/bin/answer.py?hl=en&answer=2649143).
-`NIUX2_SEARCH_TRANSL` is the search text displayed in header bar, which is "Search" by default.
-`NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search ..." by default. 
+*  `NIUX2_GOOGLE_CSE_ID` is your your google custom [search engine id](http://support.google.com/customsearch/bin/answer.py?hl=en&answer=2649143).
+*  `NIUX2_SEARCH_TRANSL` is the search text displayed in header bar, which is "Search" by default.
+*  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` is the placeholder of your search box, which is "Press enter to search ..." by default. 
 
 The css codes above will set the width of your search box to 200px.
 
