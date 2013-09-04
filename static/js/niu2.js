@@ -5,6 +5,7 @@
 // toggle the google cse input box
 function showCSE() {
     if (!$("#niu2-cse-search-input").is(":visible")) {
+        $("#niu2-cse-search-input").val("");
         $("#niu2-cse-search-input").show(300, function() {
             $("#niu2-cse-search-input").focus();
         });
