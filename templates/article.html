@@ -35,5 +35,7 @@
     </div>
     {% if DISQUS_SITENAME %}
         {% include "disqus.html" %}
+    {% elif NIUX2_DUOSHUO_SHORTNAME %}
+        {% include "duoshuo.html" %}
     {% endif %}
 {% endblock %}

@@ -18,7 +18,7 @@ You can check out my blog [atime.me](http://atime.me) for a live demo.
 
 *  Bootstrap3.0.0, font-awesome3.2.1 and jQuery1.10 included.
 *  Responsive(should be). 
-*  Disqus, google analytics and google custom search support.
+*  Disqus, duoshuo, google analytics and google custom search support.
 *  Pagination bar with customizable length. 
 *  Tagcloud implemented with [tagcloud.js](https://code.google.com/p/tagcloud) which supports incremental search.
 *  Collapsible monthly archives.
@@ -159,4 +159,6 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_FAVICON_URL` string(default "/favicon.png"), your favicon url
 *  `NIUX2_FOOTER_LINKS` a `NIUX2_HEADER_SECTIONS` format list shown right after your copyright info in the footer section
 *  `NIUX2_DISPLAY_TITLE` boolean(default True), whether to display the title of article and page
+*  `NIUX2_DUOSHUO_SHORTNAME` string(default None), your duoshuo shortname. Note that if `DISQUS_SITENAME` is set, duoshuo will not be loaded.
+
 
