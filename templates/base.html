@@ -42,10 +42,10 @@
         {% include "header.html" %}
     {% endblock header %}
     
-    <div class="container col-md-6 col-md-offset-3">
-           {% block content %} {% endblock content %}
-       </div>
-       <div class="container col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3">
+        {% block content %} {% endblock content %}
+    </div>
+    <div class="col-md-6 col-md-offset-3">
         {% block footer %}
             {% include "footer.html" %}
         {% endblock footer %}

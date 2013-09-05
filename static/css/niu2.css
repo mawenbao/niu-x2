@@ -23,6 +23,10 @@
 	margin-bottom: 20px;
 }
 
+#niu2-cse-wrapper {
+    margin-right: 20px;
+}
+
 #niu2-cse-header-box {
     position: absolute;
     margin-top: 3.5px;
@@ -55,7 +59,7 @@
 */
 
 .niu2-index-date {
-    width: 30%;
+    
 }
 
 .niu2-index-article {
@@ -65,7 +69,7 @@
 }
 
 a.niu2-toggle-ctrl {
-    border: solid 1px #999999;
+    border: 1px solid #999999;
     height: 28px;
     font-size: 18px;
     padding-left: 5px;
@@ -87,7 +91,6 @@ a.niu2-toggle-ctrl:hover {
 
 .niu2-footer {
     clear: both;
-    margin-bottom: 50px;
 }
 
 .niu2-footer hr {
@@ -170,12 +173,18 @@ ul#niu2-archives {
     padding-left: 10px;
 }
 
-.niu2-page {
+.niu2-page, .niu2-content {
 	padding-top: 30px;
+}
+
+.niu2-page h1, .niu2-article h1 {
 }
 
 .niu2-article {
 	padding-top: 45px;
+}
+
+h1.niu2-heading {
 }
 
 .niu2-meta {
@@ -210,6 +219,7 @@ h4:before, h5:before, h6:before {
 }
 
 #niu2-cse-wrapper {
+    margin-right: 20px;
     padding-bottom: 10px;
     width: 140px;
 }

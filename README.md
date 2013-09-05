@@ -132,7 +132,7 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 
 ### Footer icons
 
-`NIUX2_FOOTER_ICONS` is a list of icon links shown in the footer section, floated right. Each element follows the format `(icon class, link title, link href)`, e.g.:
+`NIUX2_FOOTER_ICONS` is a list of icon links shown in the footer section. Each element follows the format `(icon class, link title, link href)`, e.g.:
 
     NIUX2_FOOTER_ICONS = [
          ("icon-envelope-alt", "my email address", "mailto: wilbur.ma@foxmail.com"),

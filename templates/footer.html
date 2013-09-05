@@ -6,7 +6,7 @@
 		by <a href="http://atime.me">Ma Wenbao</a>, icons by 
 		<a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>.
 	</p>
-	<p class="pull-left">
+	<p>
 		Copyright
 		{% if articles[0] %}
 			{% if articles[0].date.year == articles[-1].date.year %}
@@ -23,7 +23,7 @@
 			<a href="{{ link[2] }}" title="{{ link[1] }}">{{ link[0] }}</a>
 		{% endfor %}
     </p>
-    <p class="niu2-icons pull-right">
+    <p class="niu2-icons">
 	    {% for icon in NIUX2_FOOTER_ICONS %}
 	        <a href="{{ icon[2] }}" title="{{ icon[1] }}">
 	            <i class="{{ icon[0] }} icon-large"></i>

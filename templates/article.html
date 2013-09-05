@@ -32,8 +32,8 @@
 	        <h1>{{ article.title }}</h1>
 	    {% endif %}
         {{ article.content }}
-        {% if DISQUS_SITENAME %}
-            {% include "disqus.html" %}
-        {% endif %}
     </div>
+    {% if DISQUS_SITENAME %}
+        {% include "disqus.html" %}
+    {% endif %}
 {% endblock %}
