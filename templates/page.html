@@ -1,14 +1,7 @@
 {% extends "base.html" %}
 {% block title %} {{ page.html_h1 | default(page.title) }} - {{ super() }} {% endblock %}
 {% block head_js_onload %}
-$(".dropdown-toc .dropdown-menu>li a").each(function(index) {
-    href = $(this).attr("href");
-    $(this).bind("click", {id: href}, function(event) {
-        $("html, body").animate({scrollTop: $(event.data.id).offset().top}, "fast");
-    });
-});
-$(":header").append("<i class='icon-caret-up .niu2-top-icon-hidden'></i>");
-$(":header").hover(toggleTopIcon, toggleTopIcon);
+initTocScrollAnination();
 {% endblock head_js_onload %}
 {% block content %}
     <div class="niu2-page">
