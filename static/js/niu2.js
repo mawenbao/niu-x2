@@ -19,3 +19,8 @@ function hideCSE() {
         $("#niu2-cse-search-image").show(300);
     }
 }
+
+function toggleTopIcon() {
+    $(this).children(":first").toggleClass("niu2-top-icon-hidden");
+}
+
