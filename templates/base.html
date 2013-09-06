@@ -15,16 +15,7 @@
     <script type="text/javascript" src="/theme/js/niu2.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#niu2-cse-ctrl-box").click(showCSE);
-            $("#niu2-cse-ctrl-box").focus(showCSE);
-            $("#niu2-cse-search-input").hide();
-            $("#niu2-cse-search-input").focusout(hideCSE);
-            $(document).keyup(function(e) {
-                e = e || window.event;
-                if (e.keyCode == 27) {
-                    hideCSE();
-                }
-            });
+            initGoogleCSEAnimation();
             {% block head_js_onload %}
             {% endblock head_js_onload %}
         });

@@ -24,3 +24,24 @@ function toggleTopIcon() {
     $(this).children(":first").toggleClass("niu2-top-icon-hidden");
 }
 
+function initGoogleCSEAnimation() {
+    $("#niu2-cse-ctrl-box").click(showCSE);
+    $("#niu2-cse-ctrl-box").focus(showCSE);
+    $("#niu2-cse-search-input").hide();
+    $("#niu2-cse-search-input").focusout(hideCSE);
+    $(document).keyup(function(e) {
+        e = e || window.event;
+        if (e.keyCode == 27) {
+            hideCSE();
+        }
+    });
+}
+
+function initTocScrollAnination() {
+    $(".dropdown-toc .dropdown-menu>li a").each(function(index) {
+        href = $(this).attr("href");
+        $(this).bind("click", {id: href}, function(event) {
+        $("html, body").animate({scrollTop: $(event.data.id).offset().top}, "fast");
+        });
+    });
+}
