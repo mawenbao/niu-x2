@@ -4,6 +4,10 @@
  * @nav-link-padding: 7px
  */
 
+hr {
+    border-top: 1px solid #cccccc;
+}
+
 .niu2-404-info-bigger {
     margin-top: 30px;
     font-size: 100px;
