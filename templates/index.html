@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block head_js_onload %}
+InitIndexArticleIconAnimation();
+{% endblock head_js_onload %}
+
 {% block content %}
 
 <div class="niu2-page">
@@ -16,11 +20,11 @@
 
 {% if articles %}
 	{% for article in (articles_page.object_list if articles_page else articles) %}
-	   <div class="niu2-index-date pull-right">
-		  <i class="icon-calendar"></i>
+	   <div class="niu2-index-date pull-right" id="niu2-index-date-id-{{ loop.index }}">
+		  <i class="icon-calendar-empty"></i>
 		  <span>{{ article.date.strftime('%Y-%m-%d') }}</span>    
 	   </div>
-	   <div class="niu2-index-article">
+	   <div class="niu2-index-article" id="niu2-index-article-id-{{ loop.index }}">
            <span>
                {% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] %}
                    {% set my_cat = NIUX2_CATEGORY_MAP[article.category][0] %}

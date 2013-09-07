@@ -13,6 +13,7 @@
 	       <ul id="arc-{{ currArcDate }}" class="collapse {{ 'in' if loop.first else 'out' }}">
 		   {% endif %}
 	       <li>
+               <span>{{ article.date.strftime('%d') }}</span>
 	           <a href="{{ SITEURL }}/{{ article.url }}" title="{{ NIUX2_CATEGORY_TRANSL | default("Category") }} {{ article.category }}">
                    {{ article.html_h1 | default(article.title) }}
 	           </a>

@@ -41,7 +41,18 @@ function initTocScrollAnination() {
     $(".dropdown-toc .dropdown-menu>li a").each(function(index) {
         href = $(this).attr("href");
         $(this).bind("click", {id: href}, function(event) {
-        $("html, body").animate({scrollTop: $(event.data.id).offset().top}, 400);
+            $("html, body").animate({scrollTop: $(event.data.id).offset().top}, 400);
         });
+    });
+}
+
+function InitIndexArticleIconAnimation() {
+    $(".niu2-index-article").each(function() {
+        aidArr = $(this).attr("id").split("-");
+        did = "#niu2-index-date-id-" + aidArr[aidArr.length - 1];
+        iconObj = $(did).children("i");
+        aa = $(this).find(">span>a");
+        aa.bind("mouseenter", {target: iconObj}, function(event) { event.data.target.attr("class", "icon-calendar"); });
+        aa.bind("mouseleave", {target: iconObj}, function(event) { event.data.target.attr("class", "icon-calendar-empty"); });
     });
 }
