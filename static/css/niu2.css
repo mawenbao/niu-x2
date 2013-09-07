@@ -101,6 +101,14 @@ hr {
     text-decoration: none;	
 }
 
+.niu2-category-list {
+    padding-left: 5px;
+}
+
+.niu2-category-list li {
+    list-style: none;
+}
+
 a.niu2-toggle-ctrl {
     border: 1px solid #999999;
     height: 28px;
