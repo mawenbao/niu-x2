@@ -4,6 +4,11 @@
  * @nav-link-padding: 7px
  */
 
+/* fix navbar blik issue on chrome windows */
+.navbar {
+    -webkit-backface-visibility: hidden;
+}
+
 hr {
     border-top: 1px solid #cccccc;
 }
