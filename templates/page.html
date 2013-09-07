@@ -1,8 +1,15 @@
 {% extends "base.html" %}
+
 {% block title %} {{ page.html_h1 | default(page.title) }} - {{ super() }} {% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments/{{ NIUX2_PYGMENTS_THEME | default("github") }}.css" type="text/css" />
+{% endblock head %}
+
 {% block head_js_onload %}
 initTocScrollAnination();
 {% endblock head_js_onload %}
+
 {% block content %}
     <div class="niu2-page">
         {% if NIUX2_DISPLAY_TITLE is not defined or NIUX2_DISPLAY_TITLE %}

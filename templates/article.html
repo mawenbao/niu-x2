@@ -2,6 +2,10 @@
 
 {% block title %} {{ article.html_h1 | default(article.title) }} - {{ super() }} {% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments/{{ NIUX2_PYGMENTS_THEME | default("github") }}.css" type="text/css" />
+{% endblock head %}
+
 {% block head_js_onload %}
 initTocScrollAnination();
 {% endblock head_js_onload %}
