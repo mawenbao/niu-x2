@@ -13,6 +13,11 @@ hr {
     border-top: 1px solid #ccc;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .niu2-top-icon-hidden {
     display: none;
 }
