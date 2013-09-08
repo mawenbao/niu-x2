@@ -10,7 +10,7 @@
 }
 
 hr {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #ccc;
 }
 
 .niu2-top-icon-hidden {
@@ -57,7 +57,7 @@ hr {
 }
 
 #niu2-cse-ctrl-box {
-    color: #999999;
+    color: #999;
     margin-top: 6px;
     cursor: pointer;
 }
@@ -90,7 +90,7 @@ hr {
 }
 
 .niu2-footer hr {
-	margin: 15px 0;
+	margin: 8px 0;
 }
 
 .niu2-footer p {
@@ -115,13 +115,13 @@ hr {
 }
 
 a.niu2-toggle-ctrl {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     height: 28px;
     font-size: 18px;
     padding-left: 5px;
     cursor: pointer;
     display: block;
-    color: #333333;
+    color: #333;
     width: 70%;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -180,7 +180,7 @@ a.niu2-toggle-ctrl:hover {
 
 .dropdown-toc a {
 	padding: 3px 0 5px 5px;
-	color: #333333;
+	color: #333;
 	display: list-item;
 }
 
@@ -227,7 +227,7 @@ h1.niu2-heading {
 }
 
 .niu2-meta a {
-    color: #333333;
+    color: #333;
 }
 
 .niu2-meta-tag {
@@ -273,7 +273,7 @@ h4:before, h5:before, h6:before {
 }
 
 #niu2-cse-ctrl-box {
-    color: #999999;
+    color: #999;
     position: absolute;
     margin-top: -20px;
     margin-left: 3px;
@@ -284,7 +284,7 @@ h4:before, h5:before, h6:before {
 }
 
 .dropdown-toc a {
-    color: #999999;
+    color: #999;
 }
 
 }
