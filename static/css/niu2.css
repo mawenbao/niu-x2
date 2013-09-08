@@ -120,14 +120,14 @@ img {
 }
 
 a.niu2-toggle-ctrl {
-    border: 1px solid #999;
+    /* border: 1px solid #999;*/
     height: 28px;
     font-size: 18px;
     padding-left: 5px;
     cursor: pointer;
     display: block;
     color: #333;
-    width: 70%;
+    width: 100%;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -141,7 +141,7 @@ a.niu2-toggle-ctrl:hover {
 }
 
 #niu2-archives ul {
-  margin-bottom: 2px; 
+  margin-bottom: 5px; 
   padding-left: 25px;
 }
 
