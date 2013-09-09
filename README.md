@@ -17,7 +17,7 @@ You can check out my blog [atime.me](http://atime.me) for a live demo.
 ## Features
 
 *  Bootstrap3.0.0, font-awesome3.2.1 and jQuery1.10 included.
-*  Responsive(should be). 
+*  Responsive. 
 *  Disqus, duoshuo, google analytics and google custom search support.
 *  Pagination bar with customizable length. 
 *  Tagcloud implemented with [tagcloud.js](https://code.google.com/p/tagcloud) which supports incremental search.
@@ -25,6 +25,8 @@ You can check out my blog [atime.me](http://atime.me) for a live demo.
 *  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
 *  Fixed position navigation bar.
 *  TOC(table of contents) in navigation bar with the help of [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
+*  Article/Page comment on/off controled by file metadata.
+*  Pygments theme support.
 *  Categories shown in a dropdown list.
 *  Category aliases, which should be useful when you set `USE_FOLDER_AS_CATEGORY` to `True`.
 *  Custom dropdown menu, footer links and footer icons through pelican configuration with font-awesome icons.
@@ -37,13 +39,17 @@ If you are hosting your pelican site locally, please remeber to set the `SITEURL
 
 For more theme related configurations, please refer to `Theme settings` section below.
 
-First clone my theme:
+First clone the repository:
 
     git clone https://github.com/wilbur-ma/niu-x2
 
 Then set `THEME` variable to the path of the repository folder you have just cloned in your pelican configuration.
 
     THEME = ~/repo/niu-x2
+
+The theme depends on the jinja2 `expression statement` extension which should be added to your pelican configuration as below:
+
+    JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
 
 ## TODO
 
@@ -66,6 +72,14 @@ Note that:
 
 *  All the following theme configuration variables are optional.
 *  All the icons come from font awesome. You can find the icon class name [here](http://fortawesome.github.io/Font-Awesome/icons/).
+
+### Enable/Disable comments
+
+The theme enables comments for all the articles and pages by default. However you can disable comments for some particular articles or pages by setting `Comment` metadata to any value other than `on`, e.g.:
+
+    Title: An Article With No Comments
+    Date: 2013-09-09 21:38:00
+    Comment: off
 
 ### Custom 404
 

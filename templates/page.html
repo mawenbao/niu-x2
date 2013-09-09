@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ page.html_h1 | default(page.title) }} - {{ super() }}{% endblock %}
+{% block title %}{{ page.title }} - {{ super() }}{% endblock %}
 
 {% block head_init %}
 {{ super() }}
@@ -13,9 +13,17 @@ initTocScrollAnination();
 
 {% block content %}
     <div class="niu2-page">
-        {% if NIUX2_DISPLAY_TITLE is not defined or NIUX2_DISPLAY_TITLE %}
+        {% if (NIUX2_DISPLAY_TITLE is not defined) or NIUX2_DISPLAY_TITLE %}
             <h1>{{ page.title }}</h1>
         {% endif %}
         {{ page.content }}
     </div>
+    
+    {% if (page.metadata['comment'] is not defined) or (page.metadata['comment'] | trim | upper == 'ON') %}
+        {% if DISQUS_SITENAME %}
+            {% include "disqus.html" %}
+        {% elif NIUX2_DUOSHUO_SHORTNAME %}
+            {% include "duoshuo.html" %}
+        {% endif %}
+    {% endif %}
 {% endblock %}

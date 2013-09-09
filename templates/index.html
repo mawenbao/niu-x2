@@ -20,22 +20,22 @@ InitIndexArticleIconAnimation();
 
 {% if articles %}
 	{% for article in (articles_page.object_list if articles_page else articles) %}
-	   <div class="niu2-index-date pull-right" id="niu2-index-date-id-{{ loop.index }}">
-		  <i class="icon-calendar-empty"></i>
-		  <span>{{ article.date.strftime('%Y-%m-%d') }}</span>    
-	   </div>
 	   <div class="niu2-index-article" id="niu2-index-article-id-{{ loop.index }}">
-           <span>
+           <h2>
                {% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] %}
                    {% set my_cat = NIUX2_CATEGORY_MAP[article.category][0] %}
-                   {% set my_cat_icon = NIUX2_CATEGORY_MAP[article.category][1] %}
                {% else %}
                    {% set my_cat = article.category %}
-                   {% set my_cat_icon = "icon-folder-open" %}
                {% endif %}
-              <i class="{{ my_cat_icon }}"></i>
-              <a href="{{ SITEURL }}/{{ article.url }}">{{ article.html_h1 | default(article.title) }}</a>
-           </span>
+              <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+           </h2>
+       </div>
+       <div class="niu2-index-date" id="niu2-index-date-id-{{ loop.index }}">
+          <i class="icon-calendar-empty"></i>
+          <span>{{ article.date.strftime('%Y-%m-%d') }}</span>    
+       </div>
+       <div class="niu2-article-summary">
+           {{ article.summary }}
        </div>
 	{% endfor %}
 {%endif%}
