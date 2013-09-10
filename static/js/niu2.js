@@ -38,7 +38,7 @@ function initGoogleCSEAnimation() {
 }
 
 function initTocScrollAnination() {
-    $(".dropdown-toc .dropdown-menu>li a").each(function(index) {
+    $(".dropdown-toc .dropdown-menu li a").each(function(index) {
         href = $(this).attr("href");
         $(this).bind("click", {id: href}, function(event) {
             $("html, body").animate({scrollTop: $(event.data.id).offset().top}, 400);
