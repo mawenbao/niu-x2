@@ -64,9 +64,9 @@
 		{% endfor %}
         {% endif %}
 		<!--  table of contents of page or article -->
-        {% if page and page.html_toc %}
+        {% if page %}
             {% set curr_content = page %}
-        {% elif article and article.html_toc %}
+        {% elif article %}
             {% set curr_content = article %}
         {% endif %}
         {% if curr_content %}
