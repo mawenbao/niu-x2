@@ -41,10 +41,6 @@ img {
 	margin-top: 30px;
 }
 
-.niu2-index-title {
-	margin-bottom: 20px;
-}
-
 #niu2-cse-wrapper {
     margin-right: 20px;
 }
@@ -80,13 +76,45 @@ img {
 }
 */
 
+.niu2-meta {
+    margin-bottom: 35px;
+}
+
+.niu2-meta a, .niu2-meta-index a {
+    color: #333;
+}
+
+.niu2-meta-tag {
+    padding-left: 10px; 
+}
+
+.niu2-meta-category-index, .niu2-meta-tag-index {
+    margin-right: 10px;
+}
+
+.niu2-meta-index {
+    margin: 6px 0;
+}
+
+.niu2-meta-date-index {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.niu2-index-title {
+    margin-bottom: 20px;
+}
+
 .niu2-index-date {
     
 }
 
 .niu2-index-article {
-	font-size: 16px;
-	margin: 7px 0;
+    margin: 20px 0;
+}
+
+.niu2-index-article-title {
+	font-size: 25px;
 }
 
 .niu2-footer {
@@ -224,18 +252,6 @@ a.niu2-toggle-ctrl:hover {
 }
 
 h1.niu2-heading {
-}
-
-.niu2-meta {
-    margin-bottom: 35px;
-}
-
-.niu2-meta a {
-    color: #333;
-}
-
-.niu2-meta-tag {
-    padding-left: 10px; 
 }
 
 /* fix headings covered by fixed header problem */

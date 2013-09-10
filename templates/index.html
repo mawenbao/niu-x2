@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-{% block head_js_onload %}
-InitIndexArticleIconAnimation();
-{% endblock head_js_onload %}
-
 {% block content %}
 
 <div class="niu2-page">
@@ -20,22 +16,21 @@ InitIndexArticleIconAnimation();
 
 {% if articles %}
 	{% for article in (articles_page.object_list if articles_page else articles) %}
-	   <div class="niu2-index-article" id="niu2-index-article-id-{{ loop.index }}">
-           <h2>
+	   <div class="niu2-index-article">
+	   <div class="niu2-index-article-title">
+           <span>
                {% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] %}
                    {% set my_cat = NIUX2_CATEGORY_MAP[article.category][0] %}
                {% else %}
                    {% set my_cat = article.category %}
                {% endif %}
               <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-           </h2>
+           </span>
        </div>
-       <div class="niu2-index-date" id="niu2-index-date-id-{{ loop.index }}">
-          <i class="icon-calendar-empty"></i>
-          <span>{{ article.date.strftime('%Y-%m-%d') }}</span>    
-       </div>
+       {% include "article_meta_index.html" %}
        <div class="niu2-article-summary">
-           {{ article.summary }}
+           {{ article._summary }}
+       </div>
        </div>
 	{% endfor %}
 {%endif%}
