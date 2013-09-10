@@ -37,7 +37,7 @@ function initGoogleCSEAnimation() {
     });
 }
 
-function initTocScrollAnination() {
+function initTocScrollAnimation() {
     $(".dropdown-toc .dropdown-menu li a").each(function(index) {
         href = $(this).attr("href");
         $(this).bind("click", {id: href}, function(event) {
