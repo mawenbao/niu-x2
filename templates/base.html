@@ -33,14 +33,17 @@
     {% endblock head %}
   </head>
   <body>
+    <div id="body-header">
     {% block body_header %}
         {% include "header.html" %}
     {% endblock body_header %}
+    </div>
     
-    <div class="col-md-6 col-md-offset-3">
+    <div id="body-content" class="col-md-6 col-md-offset-3">
         {% block content %} {% endblock content %}
     </div>
-    <div class="col-md-6 col-md-offset-3">
+
+    <div id="body-footer" class="col-md-6 col-md-offset-3">
         {% block footer %}
             {% include "footer.html" %}
         {% endblock footer %}

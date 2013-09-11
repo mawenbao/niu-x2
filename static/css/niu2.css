@@ -9,8 +9,19 @@
     -webkit-backface-visibility: hidden;
 }
 
-ul ul,ol ul,ul ol,ol ol {
+#body-content ul ul, 
+#body-content ol ul,
+#body-content ul ol,
+#body-content ol ol {
     margin-bottom: 11px;
+}
+
+.navbar ul, .navbar ol {
+    line-height: 1.42 !important;
+}
+
+p, #body-content ul, #body-content ol {
+    line-height: 1.6;
 }
 
 hr {
@@ -20,10 +31,6 @@ hr {
 img {
     max-width: 100%;
     height: auto;
-}
-
-p, ul, ol {
-    line-height: 1.6;
 }
 
 .niu2-top-icon-hidden {
