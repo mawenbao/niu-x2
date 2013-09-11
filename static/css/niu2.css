@@ -10,6 +10,10 @@
     -webkit-backface-visibility: hidden;
 }
 
+ul ul,ol ul,ul ol,ol ol {
+    margin-bottom: 11px;
+}
+
 hr {
     border-top: 1px solid #ccc;
 }
