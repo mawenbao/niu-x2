@@ -22,8 +22,8 @@ img {
     height: auto;
 }
 
-p {
-    line-height: 1.6em;
+p, ul, ol {
+    line-height: 1.6;
 }
 
 .niu2-top-icon-hidden {
@@ -139,6 +139,10 @@ p {
 	margin: 5px 0;
 }
 
+.tagcloud-list {
+    line-height: 1.4;
+}
+
 .niu2-button {
 	margin-left: 5px;
 }
@@ -174,6 +178,10 @@ a.niu2-toggle-ctrl:hover {
     text-decoration: none;
     color: white;
     background-color: #428bca;
+}
+
+#niu2-archives {
+    font-size: 15px;
 }
 
 #niu2-archives ul {
