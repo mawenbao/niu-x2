@@ -49,6 +49,14 @@
   compare x-N/2-3 == 3 and x+N/2-4 == n-1
 #}
 
+{% macro paginater_elem(pageNo) -%}
+       {% if articles_page.number == pageNo %}
+       <li class="active"><span>{{ pageNo }}</span></li>
+       {% else %}
+       <li><a href="{{ SITEURL }}/{{ page_name }}{{ pageNo if pageNo > 1 }}.html">{{ pageNo }}</a></li>
+       {% endif %}
+{%- endmacro %}
+
 {% if articles_page and articles_paginator.num_pages > 1 %}
 <ul class="pagination">
 	{% if articles_page.has_previous() %}
@@ -57,9 +65,7 @@
 	       <i class="icon-caret-left icon-large"></i></a>
 	   </li>
 	{% else %}
-	   <li class="disabled"><a href="#">
-	       <i class="icon-caret-left icon-large"></i></a>
-	   </li>
+	   <li class="disabled"><span> <i class="icon-caret-left icon-large"></i></span></li>
 	{% endif %}
 	{% set page_limit = NIUX2_PAGINATOR_LENGTH | default(11) %}
 	{% if articles_paginator.num_pages > page_limit %}
@@ -67,45 +73,31 @@
 	   {% if page_limit % 2 != 0 %}
 	       {% set divide_lost = 1 %}
 	   {% endif %}
-	   <li class="{{ 'active' if 1 == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}.html">1</a>
-       </li>
-       <li class="{{ 'active' if 2 == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}2.html">2</a>
-       </li>
+	   {{ paginater_elem(1) }}
+	   {{ paginater_elem(2) }}
 	   {% if articles_page.number <= page_limit // 2 %}
-	       {% for num in range(3, page_limit - 2) %}
-       <li class="{{ 'active' if num == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-       </li>
-           {% endfor %}
-       <li class="disabled"><a href="#">...</a></li>
+       {% for num in range(3, page_limit - 2) %}
+       {{ paginater_elem(num) }}
+       {% endfor %}
+       <li class="disabled"><span>...</span></li>
        {% elif articles_page.number >= articles_paginator.num_pages + 2 - page_limit // 2 - divide_lost %}
-       <li class="disabled"><a href="#">...</a></li>
-           {% for num in range(articles_paginator.num_pages - page_limit + 4, articles_paginator.num_pages - 1) %}
-       <li class="{{ 'active' if num == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-       </li>
-           {% endfor %}
+       <li class="disabled"><span>...</span></li>
+       {% for num in range(articles_paginator.num_pages - page_limit + 4, articles_paginator.num_pages - 1) %}
+       {{ paginater_elem(num) }}
+       {% endfor %}
        {% else %}
-       <li class="disabled"><a href="#">...</a></li>
-           {% for num in range(articles_page.number - page_limit // 2 + 3, articles_page.number + page_limit // 2 - 3 + divide_lost) %}
-       <li class="{{ 'active' if num == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-       </li>
-           {% endfor %}
-       <li class="disabled"><a href="#">...</a></li>
+       <li class="disabled"><span>...</span></li>
+       {% for num in range(articles_page.number - page_limit // 2 + 3, articles_page.number + page_limit // 2 - 3 + divide_lost) %}
+       {{ paginater_elem(num) }}
+       {% endfor %}
+       <li class="disabled"><span>...</span></li>
        {% endif %}
        {% for num in range(articles_paginator.num_pages - 1, articles_paginator.num_pages + 1) %}
-       <li class="{{ 'active' if num == articles_page.number else '' }}">
-           <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-       </li>
+       {{ paginater_elem(num) }}
        {% endfor %}
 	{% else %}
 		{% for num in range(1, 1 + articles_paginator.num_pages) %}
-		   <li class="{{ 'active' if num == articles_page.number else '' }}">
-		       <a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-		   </li>
+        {{ paginater_elem(num) }}
 		{% endfor %}
 	{% endif %}
 	{% if articles_page.has_next() %}
@@ -113,7 +105,7 @@
 	       <i class="icon-caret-right icon-large"></i></a>
 	   </li>
 	{% else %}
-	   <li class="disabled"><a href="#"><i class="icon-caret-right icon-large"></i></a></li>
+	   <li class="disabled"><span><i class="icon-caret-right icon-large"></i></span></li>
 	{% endif %}
 </ul>
 {% endif %}
