@@ -2,7 +2,6 @@
  * built with boostrap3 
  * @navbar-height: 30px
  * @nav-link-padding: 7px
- * @line-height-base: 1.6
  */
 
 /* fix navbar blik issue on chrome windows */
@@ -21,6 +20,10 @@ hr {
 img {
     max-width: 100%;
     height: auto;
+}
+
+p {
+    line-height: 1.6em;
 }
 
 .niu2-top-icon-hidden {
