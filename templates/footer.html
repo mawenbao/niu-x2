@@ -8,7 +8,7 @@
 	</p>
 	<p>
 		Copyright
-		{%- if articles[0] -%}
+		{% if articles[0] -%}
 			{%- if articles[0].date.year == articles[-1].date.year -%}
 				{{ articles[0].date.year }}
 			{%- else -%}
@@ -16,7 +16,7 @@
 			{%- endif -%}
 		{%- else -%}
 		     2013
-		{%- endif -%}
+		{%- endif %}
 		<a href="{{ SITEURL }}">{{ AUTHOR | default("") }}</a>
 		{%- for link in NIUX2_FOOTER_LINKS -%}
 			| <i class="{{ link[3] }}"></i>

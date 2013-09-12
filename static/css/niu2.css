@@ -156,6 +156,7 @@ img {
 .niu2-footer p {
 	padding: 0;
 	margin: 5px 0;
+    line-height: 1.42 !important;
 }
 
 .tagcloud-list {
