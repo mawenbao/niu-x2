@@ -1,16 +1,12 @@
 <div class="niu2-meta-index">
     <span class="niu2-meta-date-index">
-        <i class="icon-calendar"></i> {{ article.date.strftime("%Y-%m-%d") }}
+        <i class="icon-calendar"></i>{{ article.date.strftime("%Y-%m-%d") }}
     </span>
     <span class="niu2-meta-category-index">
     {%- if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] -%}
-        <i class="{{ NIUX2_CATEGORY_MAP[article.category][1] }}"></i>
-        <a href="{{ SITEURL }}/{{ article.category.url }}">
-            {{ NIUX2_CATEGORY_MAP[article.category][0] }}
-        </a>
+        <i class="{{ NIUX2_CATEGORY_MAP[article.category][1] }}"></i><a href="{{ SITEURL }}/{{ article.category.url }}">{{ NIUX2_CATEGORY_MAP[article.category][0] }}</a>
     {%- else -%}
-        <i class="icon-open-folder"></i>
-        {{ article.category }}
+        <i class="icon-open-folder"></i>{{ article.category }}
     {%- endif -%}
     </span>
     {%- if article.tags -%}

@@ -4,6 +4,14 @@
  * @nav-link-padding: 7px
  */
 
+i {
+    margin-right: 4px;
+}
+
+h1 i {
+    margin-right: 7px;
+}
+
 /* fix navbar blik issue on chrome windows */
 .navbar {
     -webkit-backface-visibility: hidden;
@@ -101,6 +109,10 @@ img {
 
 .niu2-meta-tag {
     padding-left: 10px; 
+}
+
+.niu2-meta-tag a, .niu2-meta-tag-index a {
+    margin-right: 4px;
 }
 
 .niu2-meta-category-index, .niu2-meta-tag-index {
