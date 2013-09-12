@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block head %}
-    {% block head_init %}
+    {%- block head -%}
+    {%- block head_init -%}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <title>{%- block title -%}{{ SITENAME }}{%- endblock -%}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ NIUX2_FAVICON_URL | default('/favicon.png') }}">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css" type="text/css" />
@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/custom.css" type="text/css" />
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/niu2.js"></script>
-    {% endblock head_init %}
+    {%- endblock head_init -%}
     
     <script type="text/javascript">
         $(document).ready(function(){
             initGoogleCSEAnimation();
-            {% block head_js_onload %}
-            {% endblock head_js_onload %}
+            {%- block head_js_onload -%}
+            {%- endblock head_js_onload -%}
         });
     </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,25 +30,25 @@
     <!--[if IE 7]>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome-ie7.min.css">
     <![endif]-->
-    {% endblock head %}
+    {%- endblock head -%}
   </head>
   <body>
     <div id="body-header">
-    {% block body_header %}
-        {% include "header.html" %}
-    {% endblock body_header %}
+    {%- block body_header -%}
+        {%- include "header.html" -%}
+    {%- endblock body_header -%}
     </div>
     
     <div id="body-content" class="col-md-6 col-md-offset-3">
-        {% block content %} {% endblock content %}
+        {%- block content -%} {%- endblock content -%}
     </div>
 
     <div id="body-footer" class="col-md-6 col-md-offset-3">
-        {% block footer %}
-            {% include "footer.html" %}
-        {% endblock footer %}
+        {%- block footer -%}
+            {%- include "footer.html" -%}
+        {%- endblock footer -%}
     </div>
-    {% if GOOGLE_ANALYTICS %}
+    {%- if GOOGLE_ANALYTICS -%}
 	    <script type="text/javascript">
 	      var _gaq = _gaq || [];
 	      _gaq.push(['_setAccount', '{{ GOOGLE_ANALYTICS }}']);
@@ -60,11 +60,11 @@
 	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	      })();
 	    </script>
-    {% endif %}
+    {%- endif -%}
     
-    {% block additional_js %}
+    {%- block additional_js -%}
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
-    {% endblock additional_js %}
+    {%- endblock additional_js -%}
   </body>
 </html>

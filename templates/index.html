@@ -1,45 +1,45 @@
-{% extends "base.html" %}
+{%- extends "base.html" -%}
 
-{% block content %}
+{%- block content -%}
 
 <div class="niu2-page">
 
-{% block content_header %}
+{%- block content_header -%}
 
 <h1 class="niu2-index-title">
 {{ SITENAME }}
 </h1>
 
-{% endblock content_header %}
+{%- endblock content_header -%}
 
-{% block content_body %}
+{%- block content_body -%}
 
-{% if articles %}
-	{% for article in (articles_page.object_list if articles_page else articles) %}
+{%- if articles -%}
+	{%- for article in (articles_page.object_list if articles_page else articles) -%}
 	   <div class="niu2-index-article">
 	   <div class="niu2-index-article-title">
            <span>
-               {% if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] %}
-                   {% set my_cat = NIUX2_CATEGORY_MAP[article.category][0] %}
-               {% else %}
-                   {% set my_cat = article.category %}
-               {% endif %}
+               {%- if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] -%}
+                   {%- set my_cat = NIUX2_CATEGORY_MAP[article.category][0] -%}
+               {%- else -%}
+                   {%- set my_cat = article.category -%}
+               {%- endif -%}
               <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
            </span>
        </div>
-       {% include "article_meta_index.html" %}
+       {%- include "article_meta_index.html" -%}
        <div class="niu2-article-summary">
            {{ article._summary }}
        </div>
        </div>
-	{% endfor %}
-{%endif%}
+	{%- endfor -%}
+{%-endif-%}
 
-{% endblock content_body %}
+{%- endblock content_body -%}
 </div>
 
-{% block pager %}
-{% include "pagination.html" %}
-{% endblock pager %}
+{%- block pager -%}
+{%- include "pagination.html" -%}
+{%- endblock pager -%}
 
-{% endblock content %}
+{%- endblock content -%}
