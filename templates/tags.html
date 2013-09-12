@@ -2,7 +2,7 @@
 
 {%- block head_init -%}
 {{ super() }}
-<script type="text/javascript" src="/theme/js/tagcloud.min.js"></script>
+<script type="text/javascript" src="{{ SITEURL }}/theme/js/tagcloud.min.js"></script>
 <script type="text/javascript">
 var tc = TagCloud.create();
 {%- for tag, article_list in tags -%}
@@ -37,5 +37,5 @@ tc.setup('niu2-tagcloud');
 {%- endblock content -%}
 
 {%- block additional_js -%}
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 {%- endblock additional_js -%}
