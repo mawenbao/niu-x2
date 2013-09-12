@@ -77,6 +77,11 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="#content-heading">{{ curr_content.title }}</a><ul>{{ curr_content.html_toc }}</ul></li>
+                    {% if (curr_content.metadata['comment'] is not defined) or (curr_content.metadata['comment'] | trim | upper == 'ON') %}
+                    {% if DISQUS_SITENAME or NIUX2_DUOSHUO_SHORTNAME %}
+                    <li><a href="#content-comments">{{ NIUX2_COMMENTS_TRANSL | default("Comments") }}</a></li>
+                    {% endif %}
+                    {% endif %}
                 </ul>
             </li>
         {% endif %}

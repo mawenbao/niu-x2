@@ -166,6 +166,7 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_HEADER_TOC_TRANSL` string(default "TOC"), name of the categories dropdown menu
 *  `NIUX2_SEARCH_TRANSL` string(default "Search"), name displayed for google cse in the header bar
 *  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search ..."), placeholder of the header search box
+*  `NIUX2_COMMENTS_TRANSL` string(default "Comments"), translation of comments
 
 ### Misc settings
 

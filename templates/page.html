@@ -19,11 +19,6 @@ initTocScrollAnimation();
         {{ page.content }}
     </div>
     
-    {% if (page.metadata['comment'] is not defined) or (page.metadata['comment'] | trim | upper == 'ON') %}
-        {% if DISQUS_SITENAME %}
-            {% include "disqus.html" %}
-        {% elif NIUX2_DUOSHUO_SHORTNAME %}
-            {% include "duoshuo.html" %}
-        {% endif %}
-    {% endif %}
+    {% from "comments_wrapper.html" import niu2_comments %}
+    {{ niu2_comments(page, DISQUS_SITENAME, NIUX2_DUOSHUO_SHORTNAME) }}
 {% endblock %}
