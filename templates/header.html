@@ -38,7 +38,7 @@
                       <i class="{{ NIUX2_CATEGORY_MAP[cat][1] }}"></i>{{ NIUX2_CATEGORY_MAP[cat][0] }}
 	               {%- else -%}
 	               <i class="icon-folder-close"></i>{{ cat }}
-	               {%- endif -%}
+	               {%- endif %}
                       ({{ article_list | count }})</a></li>
                {%- endfor -%}
            </ul>
