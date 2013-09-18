@@ -2,7 +2,8 @@
 
 {%- block head_init -%}
 {{ super() }}
-<script type="text/javascript" src="{{ SITEURL }}/theme/js/tagcloud.min.js"></script>
+{% set theme_loc = NIUX2_LIB_THEME if NIUX2_LIB_THEME else SITEURL + '/theme' -%}
+<script type="text/javascript" src="{{ theme_loc }}/js/tagcloud.min.js"></script>
 <script type="text/javascript">
 var tc = TagCloud.create();
 {%- for tag, article_list in tags -%}
