@@ -41,6 +41,10 @@ img {
     height: auto;
 }
 
+.niu2-lastmod-box {
+    margin-bottom: 20px;
+}
+
 .niu2-top-icon-hidden {
     display: none;
 }
@@ -112,7 +116,7 @@ img {
 }
 
 .niu2-meta-tag a, .niu2-meta-tag-index a {
-    margin-right: 4px;
+    margin-right: 6px;
 }
 
 .niu2-meta-category-index, .niu2-meta-tag-index {

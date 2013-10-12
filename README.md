@@ -167,6 +167,7 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_SEARCH_TRANSL` string(default "Search"), name displayed for google cse in the header bar
 *  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search ..."), placeholder of the header search box
 *  `NIUX2_COMMENTS_TRANSL` string(default "Comments"), translation of comments
+*  `NIUX2_LASTMOD_TRANSL` string(default "Last modified:"), translation of last modified label, need pelican update_date plugin support
 
 ### Misc settings
 
