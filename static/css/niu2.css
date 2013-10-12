@@ -4,6 +4,10 @@
  * @nav-link-padding: 7px
  */
 
+p {
+    font-size: 15px;
+}
+
 i {
     margin-right: 4px;
 }
