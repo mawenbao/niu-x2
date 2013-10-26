@@ -8,6 +8,10 @@ i {
     margin-right: 4px;
 }
 
+h1 {
+    margin-bottom: 20px;
+}
+
 h1 i {
     margin-right: 7px;
 }
@@ -47,6 +51,7 @@ img {
 }
 
 .niu2-lastmod-box {
+    margin-top: -10px;
     margin-bottom: 20px;
 }
 
