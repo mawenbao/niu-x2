@@ -107,6 +107,10 @@ img {
     margin: 2px 3px 0 5px;
 }
 
+.niu2-clearfix {
+    height: 0;
+}
+
 /*
 .niu2-index-article a:hover {
 	text-decoration: none;
@@ -130,6 +134,7 @@ img {
 
 .niu2-meta-tag a, .niu2-meta-tag-index a {
     margin-right: 6px;
+    display: inline-block;
 }
 
 .niu2-meta-category-index, .niu2-meta-tag-index {
