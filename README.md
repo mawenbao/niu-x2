@@ -177,7 +177,7 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_DISPLAY_TITLE` boolean(default True), whether to display the title of article and page
 *  `NIUX2_DUOSHUO_SHORTNAME` string(default None), your duoshuo shortname. Note that if `DISQUS_SITENAME` is set, duoshuo will not be loaded.
 *  `NIUX2_LIB_THEME` string(default SITEURL+'/theme'), url of niu-x2 theme root
-*  `NIUX2_LIB_FONTAWESOME` string(default '//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css'), url of font-awesome
+*  `NIUX2_LIB_FONTAWESOME` string(default '//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1'), url of font-awesome
 *  `NIUX2_LIB_BOOTSTRAP_JS` string(default 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js'), url of bootstrap javascript
 *  `NIUX2_LIB_JQUERY` string(default 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js'), url of jquery
 

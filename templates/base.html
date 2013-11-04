@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     {% set theme_loc = NIUX2_LIB_THEME if NIUX2_LIB_THEME else SITEURL + '/theme' -%}
+    {% set fontawesome_loc = NIUX2_LIB_FONTAWESOME if NIUX2_LIB_FONTAWESOME else '//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1' -%}
     {%- block head -%}
     {%- block head_init -%}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,7 +10,7 @@
     <title>{%- block title -%}{{ SITENAME }}{%- endblock -%}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ NIUX2_FAVICON_URL | default('/favicon.png') }}">
     <link rel="stylesheet" href="{{ theme_loc }}/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="{{ NIUX2_LIB_FONTAWESOME | default('//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ fontawesome_loc }}/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="{{ theme_loc }}/css/niu2.css" type="text/css" />
     <link rel="stylesheet" href="{{ theme_loc }}/css/custom.css" type="text/css" />
     <script type="text/javascript" src="{{ NIUX2_LIB_JQUERY | default('//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js') }}"></script>
@@ -29,7 +30,7 @@
         <script src="{{ theme_loc }}/js/respond.min.js"></script>
     <![endif]-->
     <!--[if IE 7]>
-    <link rel="stylesheet" href="{{ NIUX2_LIB_FONTAWESOME | default('//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome-ie7.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ fontawesome_loc }}/css/font-awesome-ie7.min.css" type="text/css" />
     <![endif]-->
     {%- endblock head -%}
   </head>
