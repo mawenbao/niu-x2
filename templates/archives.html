@@ -1,6 +1,7 @@
 {%- extends "base.html" -%}
 {%- block title -%}{{ NIUX2_ARCHIVE_TRANSL | default("Archives") }} - {{ super() }} {%- endblock -%}
 {%- block content -%}
+
 <div class="niu2-content">
 	<h1><i class="icon-archive"></i>{{ NIUX2_ARCHIVE_TRANSL | default("Archives") }}</h1>
 	<div id="niu2-archives">
@@ -22,9 +23,14 @@
             </a>
             <ul id="arc-{{ currArcDate }}" class="collapse {{ 'in' if loop.first else 'out' }}">
             {%- for article in monthArc -%}
+                {%- if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] -%}
+                    {%- set my_cat = NIUX2_CATEGORY_MAP[article.category][0] -%}
+                {%- else -%}
+                    {%- set my_cat = article.category -%}
+                {%- endif -%}
                 <li>
                     <span>{{ article.date.strftime('%d') }}</span>
-                    <a href="{{ SITEURL }}/{{ article.url }}" title="{{ NIUX2_CATEGORY_TRANSL | default("Category") }} {{ article.category }}">
+                    <a href="{{ SITEURL }}/{{ article.url }}" title="{{ NIUX2_CATEGORY_TRANSL | default("Category") }}: {{ my_cat }}">
                         {{ article.title }}
                     </a>
                 </li>
