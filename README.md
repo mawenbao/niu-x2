@@ -168,7 +168,6 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search ..."), placeholder of the header search box
 *  `NIUX2_COMMENTS_TRANSL` string(default "Comments"), translation of comments
 *  `NIUX2_LASTMOD_TRANSL` string(default "Last modified:"), translation of last modified label, need pelican update_date plugin support
-*  `NIUX2_PAGE_TITLE_TRANSL` string(default "page"), html title for index.html pages
 
 ### Misc settings
 
