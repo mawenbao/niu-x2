@@ -41,13 +41,15 @@
     {%- endblock body_header -%}
     </div>
     
-    <div id="body-content" class="col-md-8 col-md-offset-2">
+    <div id="body-content">
         {%- block content -%} {%- endblock content -%}
     </div>
 
-    <div id="body-footer" class="col-md-8 col-md-offset-2">
+    <div class="row">
         {%- block footer -%}
+        <div id="body-footer" class="col-md-6 col-md-offset-2">
             {%- include "footer.html" -%}
+        </div>
         {%- endblock footer -%}
     </div>
     {%- if GOOGLE_ANALYTICS -%}

@@ -167,10 +167,13 @@ Currently, there is not a search result page in this theme, so I suggest that yo
 *  `NIUX2_SEARCH_TRANSL` string(default "Search"), name displayed for google cse in the header bar
 *  `NIUX2_SEARCH_PLACEHOLDER_TRANSL` string(default "Press enter to search ..."), placeholder of the header search box
 *  `NIUX2_COMMENTS_TRANSL` string(default "Comments"), translation of comments
-*  `NIUX2_LASTMOD_TRANSL` string(default "Last modified:"), translation of last modified label, need pelican update_date plugin support
+*  `NIUX2_PUBLISHED_TRANSL` string(default "Published"), translation of publish date
+*  `NIUX2_LASTMOD_TRANSL` string(default "Last modified"), translation of last modified label, need pelican update_date plugin support
+*  `NIUX2_RECENT_UPDATE_TRANSL` string(default "Recent Updated Posts"), translation of recent updated posts
 
 ### Misc settings
 
+*  `NIUX2_RECENT_UPDATE_NUM` int(default 10), number of your recent updated posts in the sidebar, require [pelican-update-date](https://github.com/mawenbao/pelican-update-date) plugin
 *  `NIUX2_PAGINATOR_LENGTH` int(default 11), the length of your pagination bar
 *  `NIUX2_FAVICON_URL` string(default "/favicon.png"), your favicon url
 *  `NIUX2_FOOTER_LINKS` a `NIUX2_HEADER_SECTIONS` format list shown right after your copyright info in the footer section

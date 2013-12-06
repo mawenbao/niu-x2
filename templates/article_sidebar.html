@@ -1,0 +1,38 @@
+<div data-spy="affix" class="niu2-sidebar">
+    <div class="niu2-sidebar-label">{{ NIUX2_PUBLISHED_TRANSL | default("Published") }}:</div>
+    <div class="niu2-sidebar-value">{{ article.date.strftime("%Y-%m-%d %H:%M:%S") }}</div>
+    {% if article.updatedate %}
+    <div class="niu2-sidebar-label">{{ NIUX2_LASTMOD_TRANSL | default("Last modified") }}:</div>
+    <div class="niu2-sidebar-value">{{ article.updatedate }}</div>
+    {% endif %}
+    {%- if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] -%}
+    <div class="niu2-sidebar-label"><i class="{{ NIUX2_CATEGORY_MAP[article.category][1] }}"></i>{{ NIUX2_CATEGORY_TRANSL | default("Category") }}:</div>
+    <div class="niu2-sidebar-value"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ NIUX2_CATEGORY_MAP[article.category][0] }}</a></div>
+    {%- else -%}
+    <div class="niu2-sidebar-label"><i class="icon-open-folder"></i>{{ NIUX2_CATEGORY_TRANSL | default("Category") }}:</div>
+    <div class="niu2-sidebar-value"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></div>
+    {%- endif -%}
+    <div class="niu2-sidebar-label"><i class="icon-tag"></i>{{ NIUX2_TAG_TRANSL | default("Tag") }}:</div>
+    {%- if article.tags -%} 
+    {%- for tag in article.tags -%} 
+    <div class="niu2-sidebar-inter-value"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></div>
+    {%- endfor -%} 
+    {%- endif -%}
+    {% if articles_updatedate %}
+    <div class="niu2-sidebar-label">{{ NIUX2_RECENT_UPDATE_TRANSL | default("Recent Posts") }}:</div>
+    <div class="niu2-sidebar-value">
+        {% set recentPostsNum = 10 %}
+        {% if NIUX2_RECENT_UPDATE_NUM is defined %}
+        {% set recentPostsNum = NIUX2_RECENT_UPDATE_NUM %}
+        {% endif %}
+        <ul>
+            {% for article in articles_updatedate %}
+            {% if loop.index <= recentPostsNum %}
+            <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+

@@ -13,16 +13,21 @@ initTocScrollAnimation();
 {%- endblock head_js_onload -%}
 
 {%- block content -%}
-    <div class="niu2-page">
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
         {%- if (NIUX2_DISPLAY_TITLE is not defined) or NIUX2_DISPLAY_TITLE -%}
-            <h1 id="content-heading">{{ page.title }}</h1>
-            {%- if page.updatedate -%}
-                <div class="niu2-lastmod-box">{{ NIUX2_LASTMOD_TRANSL | default("Last modified:") }} {{ page.updatedate }}</div>
-            {%- endif -%}
+        <h1 id="content-heading">{{ page.title }}</h1>
         {%- endif -%}
-        {{ page.content }}
     </div>
-    
-    {%- from "comments_wrapper.html" import niu2_comments -%}
-    {{ niu2_comments(page, DISQUS_SITENAME, NIUX2_DUOSHUO_SHORTNAME) }}
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        {{ page.content }}
+        {%- from "comments_wrapper.html" import niu2_comments -%}
+        {{ niu2_comments(page, DISQUS_SITENAME, NIUX2_DUOSHUO_SHORTNAME) }}
+    </div> 
+    <div class="col-md-2">
+        {% include "page_sidebar.html" %}
+    </div>
+</div>
 {%- endblock -%}

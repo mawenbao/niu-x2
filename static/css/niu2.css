@@ -8,7 +8,12 @@ i {
     margin-right: 4px;
 }
 
+h2:first-child {
+    margin-top: 0;
+}
+
 h1 {
+	padding-top: 45px;
     margin-bottom: 20px;
 }
 
@@ -19,6 +24,10 @@ h1 i {
 blockquote p {
     font-size: 14.5px !important;
     line-height: 1.3 !important;
+}
+
+#content-comments {
+    margin-top: 25px;
 }
 
 /* fix navbar blik issue on chrome windows */
@@ -55,7 +64,30 @@ img {
     */
 }
 
-.niu2-article img {
+.niu2-sidebar-label:first-child {
+    margin-top: 0 !important;
+}
+
+.niu2-sidebar-label {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.niu2-sidebar-inter-value {
+    margin-left: 20px;
+}
+
+.niu2-sidebar-value {
+    margin-left: 20px;
+}
+
+.niu2-sidebar-value ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/*
+img {
     display: block;
     padding: 4px;
     line-height: 20px;
@@ -71,11 +103,7 @@ img {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
-.niu2-lastmod-box {
-    margin-top: -10px;
-    margin-bottom: 20px;
-}
+*/
 
 .niu2-top-icon-hidden {
     display: none;
@@ -178,8 +206,7 @@ img {
 }
 
 .niu2-index-article {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .niu2-index-article-title {
@@ -317,19 +344,8 @@ a.niu2-toggle-ctrl:hover {
     padding-left: 10px;
 }
 
-.niu2-page, .niu2-content {
+.niu2-content {
 	padding-top: 30px;
-}
-
-.niu2-page h1, .niu2-article h1 {
-}
-
-.niu2-article {
-	padding-top: 45px;
-    margin-bottom: 25px;
-}
-
-h1.niu2-heading {
 }
 
 /* fix headings covered by fixed header problem */
