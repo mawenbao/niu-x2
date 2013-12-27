@@ -2,6 +2,25 @@
  * Depends on jquery 1.10
  */
 
+$(document).ready(function() {
+    $(window).scroll(function() {
+        toggleSidebarTocStatic();
+        getHeaderInViewport();
+    });
+})
+
+function toggleSidebarTocStatic() {
+    var sidebarToc = $('#niu2-sidebar-toc');
+    var sidebarMeta = $('#niu2-sidebar-meta');
+    var vtop = $(window).scrollTop();
+    var vpos = sidebarMeta.offset().top + sidebarMeta.height() - 55;
+    if (vtop > vpos && 'niu2-sidebar' == sidebarToc.attr('class')) {
+        sidebarToc.attr('class', 'niu2-sidebar niu2-sidebar-toc-fixed');
+    } else if (vtop <= vpos && 'niu2-sidebar' != sidebarToc.attr('class')) {
+        sidebarToc.attr('class', 'niu2-sidebar');
+    }
+}
+
 // toggle the google cse input box
 function showCSE() {
     if (!$("#niu2-cse-search-input").is(":visible")) {
@@ -37,22 +56,12 @@ function initGoogleCSEAnimation() {
     });
 }
 
-function initTocScrollAnimation() {
-    $(".dropdown-toc .dropdown-menu li a").each(function(index) {
-        href = $(this).attr("href");
-        $(this).bind("click", {id: href}, function(event) {
-            $("html, body").animate({scrollTop: $(event.data.id).offset().top}, 400);
-        });
+function getHeaderInViewport() {
+    $(':header').each(function(i, elem) {
+        if (elem.getBoundingClientRect().top > 0) {
+            alert(elem.id);
+            return false;
+        }
     });
 }
 
-function InitIndexArticleIconAnimation() {
-    $(".niu2-index-article").each(function() {
-        aidArr = $(this).attr("id").split("-");
-        did = "#niu2-index-date-id-" + aidArr[aidArr.length - 1];
-        iconObj = $(did).children("i");
-        aa = $(this).find(">span>a");
-        aa.bind("mouseenter", {target: iconObj}, function(event) { event.data.target.attr("class", "icon-calendar"); });
-        aa.bind("mouseleave", {target: iconObj}, function(event) { event.data.target.attr("class", "icon-calendar-empty"); });
-    });
-}

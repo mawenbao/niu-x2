@@ -1,4 +1,4 @@
-<div data-spy="affix" class="niu2-sidebar">
+<div id="niu2-sidebar-meta" class="niu2-sidebar">
     <div class="niu2-sidebar-label">{{ NIUX2_PUBLISHED_TRANSL | default("Published") }}:</div>
     <div class="niu2-sidebar-value">{{ article.date.strftime("%Y-%m-%d %H:%M:%S") }}</div>
     {% if article.updatedate %}
@@ -18,21 +18,19 @@
     <div class="niu2-sidebar-inter-value"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></div>
     {%- endfor -%} 
     {%- endif -%}
-    {% if articles_updatedate %}
-    <div class="niu2-sidebar-label">{{ NIUX2_RECENT_UPDATE_TRANSL | default("Recent Posts") }}:</div>
-    <div class="niu2-sidebar-value">
-        {% set recentPostsNum = 10 %}
-        {% if NIUX2_RECENT_UPDATE_NUM is defined %}
-        {% set recentPostsNum = NIUX2_RECENT_UPDATE_NUM %}
-        {% endif %}
-        <ul>
-            {% for article in articles_updatedate %}
-            {% if loop.index <= recentPostsNum %}
-            <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
+</div>
+
+<div id="niu2-sidebar-toc" class="niu2-sidebar">
+    {%- if article -%}
+    <div class="niu2-sidebar-label"><i class="icon-list-ul"></i>{{ NIUX2_HEADER_TOC_TRANSL | default("TOC") }}</div>
+    <ul id="niu2-sidebar-toc-list">
+        {{ article.html_toc }}
+        {%- if (article.metadata['comment'] is not defined) or (article.metadata['comment'] | trim | upper == 'ON') -%}
+        {%- if DISQUS_SITENAME or NIUX2_DUOSHUO_SHORTNAME -%}
+        <li><a href="#content-comments">{{ NIUX2_COMMENTS_TRANSL | default("Comments") }}</a></li>
+        {%- endif -%}
+        {%- endif -%}
+    </ul>
+    {%- endif -%}
 </div>
 

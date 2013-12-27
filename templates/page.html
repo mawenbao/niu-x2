@@ -8,10 +8,6 @@
 <link rel="stylesheet" href="{{ theme_loc }}/css/pygments/{{ NIUX2_PYGMENTS_THEME | default("github") }}.css" type="text/css" />
 {%- endblock head_init -%}
 
-{%- block head_js_onload -%}
-initTocScrollAnimation();
-{%- endblock head_js_onload -%}
-
 {%- block content -%}
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -22,7 +18,9 @@ initTocScrollAnimation();
 </div>
 <div class="row">
     <div class="col-md-6 col-md-offset-2">
-        {{ page.content }}
+        <div id="niu2-main-content">
+            {{ page.content }}
+        </div>
         {%- from "comments_wrapper.html" import niu2_comments -%}
         {{ niu2_comments(page, DISQUS_SITENAME, NIUX2_DUOSHUO_SHORTNAME) }}
     </div> 

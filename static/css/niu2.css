@@ -64,6 +64,12 @@ img {
     */
 }
 
+/*
+#niu2-main-content {
+    border-right: 1px solid #ccc;
+}
+*/
+
 .niu2-sidebar-label:first-child {
     margin-top: 0 !important;
 }
@@ -84,6 +90,27 @@ img {
 .niu2-sidebar-value ul {
     padding-left: 0;
     list-style: none;
+}
+
+#niu2-sidebar-toc {
+    margin-top: 10px !important;
+}
+
+#niu2-sidebar-toc-list {
+    padding-left: 35px;
+}
+
+#niu2-sidebar-toc-list>li {
+    list-style: none;
+}
+
+#niu2-sidebar-toc-list li {
+    margin-left: -15px;
+}
+
+.niu2-sidebar-toc-fixed {
+    position: fixed;
+    top: 50px !important;
 }
 
 /*

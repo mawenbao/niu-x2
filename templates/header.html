@@ -60,27 +60,6 @@
 		</li>
 		{%- endfor -%}
         {%- endif -%}
-		<!--  table of contents of page or article -->
-        {%- if page -%}
-            {%- set curr_content = page -%}
-        {%- elif article -%}
-            {%- set curr_content = article -%}
-        {%- endif -%}
-        {%- if curr_content -%}
-            <li class="dropdown dropdown-toc">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon-list-ul"></i>{{ NIUX2_HEADER_TOC_TRANSL | default("TOC") }}<b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#content-heading">{{ curr_content.title }}</a><ul>{{ curr_content.html_toc }}</ul></li>
-                    {%- if (curr_content.metadata['comment'] is not defined) or (curr_content.metadata['comment'] | trim | upper == 'ON') -%}
-                    {%- if DISQUS_SITENAME or NIUX2_DUOSHUO_SHORTNAME -%}
-                    <li><a href="#content-comments">{{ NIUX2_COMMENTS_TRANSL | default("Comments") }}</a></li>
-                    {%- endif -%}
-                    {%- endif -%}
-                </ul>
-            </li>
-        {%- endif -%}
         </ul>
         
         <!-- right nav bar -->
