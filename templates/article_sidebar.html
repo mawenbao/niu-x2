@@ -15,7 +15,7 @@
     <div class="niu2-sidebar-label"><i class="icon-tag"></i>{{ NIUX2_TAG_TRANSL | default("Tag") }}:</div>
     {%- if article.tags -%} 
     {%- for tag in article.tags -%} 
-    <div class="niu2-sidebar-inter-value"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></div>
+    <div class="niu2-sidebar-inter-value niu2-sidebar-tag"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></div>
     {%- endfor -%} 
     {%- endif -%}
 </div>
