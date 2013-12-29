@@ -2,4 +2,5 @@
 .settings/
 *~
 *.swp
+/static/css/custom.css
 
