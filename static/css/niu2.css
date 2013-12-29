@@ -75,7 +75,6 @@ a.niu2-active-toc, a.niu2-active-toc:hover {
     display: block;
     padding: 0 5px;
     */
-    display: block !important;
 }
 
 a.niu2-active-toc:before {
@@ -126,7 +125,7 @@ a.niu2-active-toc:before {
 }
 
 #niu2-sidebar-toc-list li {
-    margin-left: -15px;
+    margin-left: -20px;
 }
 
 .niu2-sidebar-toc-fixed {
