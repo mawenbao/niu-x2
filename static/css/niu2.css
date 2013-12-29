@@ -133,6 +133,10 @@ a.niu2-active-toc:before {
     margin-left: -20px;
 }
 
+#niu2-sidebar-toc-list>li {
+    margin-left: -15px;
+}
+
 .niu2-sidebar-toc-fixed {
     position: fixed;
     top: 50px !important;
