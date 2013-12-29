@@ -64,11 +64,28 @@ img {
     */
 }
 
-/*
-#niu2-main-content {
-    border-right: 1px solid #ccc;
+#niu2-left-container {
+    border-right: 2px solid #ccc;
 }
-*/
+
+a.niu2-active-toc, a.niu2-active-toc:hover {
+    /*
+    color: white;
+    background-color: #428bca;
+    display: block;
+    padding: 0 5px;
+    */
+    display: block !important;
+}
+
+a.niu2-active-toc:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    margin-left: -10px;
+    margin-right: 5px; 
+    color: black;
+    display: inline-block;
+}
 
 .niu2-sidebar-label:first-child {
     margin-top: 0 !important;
@@ -100,7 +117,11 @@ img {
     padding-left: 35px;
 }
 
-#niu2-sidebar-toc-list>li {
+#niu2-sidebar-toc-list ul li {
+    display: none;
+}
+
+#niu2-sidebar-toc-list li {
     list-style: none;
 }
 

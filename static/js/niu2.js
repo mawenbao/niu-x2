@@ -2,14 +2,18 @@
  * Depends on jquery 1.10
  */
 
+window.gEnableTocStatusUpdate = true;
+
 $(document).ready(function() {
     $(window).scroll(function() {
-        toggleSidebarTocStatic();
-        getHeaderInViewport();
+        toggleSidebarTocFixed();
+        locateTocInViewport();
     });
-})
+    
+    initTocLinkScrollAnimation();
+});
 
-function toggleSidebarTocStatic() {
+function toggleSidebarTocFixed() {
     var sidebarToc = $('#niu2-sidebar-toc');
     var sidebarMeta = $('#niu2-sidebar-meta');
     var vtop = $(window).scrollTop();
@@ -56,12 +60,89 @@ function initGoogleCSEAnimation() {
     });
 }
 
-function getHeaderInViewport() {
-    $(':header').each(function(i, elem) {
-        if (elem.getBoundingClientRect().top > 0) {
-            alert(elem.id);
-            return false;
+function locateTocInViewport() {
+    if (!window.gEnableTocStatusUpdate) {
+        return;
+    }
+    var headerList = $(':header');
+    headerList.push($('#content-comments')[0]);
+    var tocFound = false;
+    for (var i = 0; i < headerList.length; i++) {
+        var elem = headerList[i];
+        // 30px is the height of fixed head bar
+        if (elem.getBoundingClientRect().top > 30) {
+            if (i > 0) {
+                elem = headerList[i - 1];
+            }
+            tocFound = true;
+            updateTocLinkStatus(elem.id);
+            break;
+        }
+    }
+    if (!tocFound) {
+        updateTocLinkStatus(headerList.last().attr('id'));
+    }
+}
+
+function updateTocLinkStatus(anchor) {
+    closeAllTocList();
+    $('#niu2-sidebar-toc-list a').each(function(li, lelem) {
+        cLink = $(lelem);
+        if (anchor == cLink.attr('href').substr(cLink.attr('href').indexOf('#') + 1)) {
+            cLink.attr('class', 'niu2-active-toc');
+            openActiveTocList(cLink.parent());
+        } else if ('' != cLink.attr('class')) {
+            cLink.attr('class', '');
         }
     });
+}
+
+function openActiveTocList(active) {
+    // show next level tocs
+    activeChilds = active.children();
+    if (activeChilds.length > 1 && $(activeChilds[1]).is('ul')) {
+        showToc($(activeChilds[1]).children());
+    }
+
+    // show active toc and his sibling tocs
+    showToc(active);
+    showToc(active.siblings());
+
+    // show active toc's parent toc and the parent toc's sibling tocs(only the top level)
+    active.parents().each(function(i, elem) {
+        if ('niu2-sidebar-toc-list' == elem.id) {
+            return false;
+        }
+        showToc($(elem));
+        showToc($(elem).siblings());
+    });
+}
+
+function closeAllTocList() {
+    hideToc($('#niu2-sidebar-toc-list ul li'));
+}
+
+function initTocLinkScrollAnimation() {
+    // toc scroll anamation
+    $('#niu2-sidebar-toc-list a').each(function(i, e) {
+        $(e).click(function(ev) {
+            ev.preventDefault();
+            window.gEnableTocStatusUpdate = false;
+            anchor = $(e).attr('href').substring($(e).attr('href').indexOf('#'))
+            $('body, html').animate(
+                {scrollTop: $(anchor).offset().top},
+                400,
+                function() { window.gEnableTocStatusUpdate = true; locateTocInViewport(); }
+            );
+        });
+    });
+}
+
+function showToc(tocs) {
+    tocs.css('display', 'block');
+}
+
+function hideToc(tocs) {
+    tocs.css('display', 'none');
 }
 

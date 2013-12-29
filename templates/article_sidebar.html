@@ -1,8 +1,8 @@
 <div id="niu2-sidebar-meta" class="niu2-sidebar">
-    <div class="niu2-sidebar-label">{{ NIUX2_PUBLISHED_TRANSL | default("Published") }}:</div>
+    <div class="niu2-sidebar-label"><i class="icon-calendar"></i>{{ NIUX2_PUBLISHED_TRANSL | default("Published") }}:</div>
     <div class="niu2-sidebar-value">{{ article.date.strftime("%Y-%m-%d %H:%M:%S") }}</div>
     {% if article.updatedate %}
-    <div class="niu2-sidebar-label">{{ NIUX2_LASTMOD_TRANSL | default("Last modified") }}:</div>
+    <div class="niu2-sidebar-label"><i class="icon-pencil"></i>{{ NIUX2_LASTMOD_TRANSL | default("Last modified") }}:</div>
     <div class="niu2-sidebar-value">{{ article.updatedate }}</div>
     {% endif %}
     {%- if NIUX2_CATEGORY_MAP and NIUX2_CATEGORY_MAP[article.category] -%}
