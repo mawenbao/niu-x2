@@ -137,7 +137,6 @@ a.niu2-active-toc:before {
 
 #niu2-sidebar-toc-list ol li {
     display: none;
-    margin-top: 2px;
 }
 
 #niu2-sidebar-toc-list li {
@@ -146,6 +145,7 @@ a.niu2-active-toc:before {
 
 #niu2-sidebar-toc-list li {
     margin-left: -20px;
+    margin-top: 4px;
 }
 
 #niu2-sidebar-toc-list>li {
