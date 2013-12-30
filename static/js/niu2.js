@@ -101,7 +101,8 @@ function openActiveTocList(active) {
     // show next level tocs
     activeChilds = active.children();
     if (activeChilds.length > 1 && $(activeChilds[1]).is('ul')) {
-        showToc($(activeChilds[1]).children());
+        showToc($(activeChilds[1]));  // show ul
+        showToc($(activeChilds[1]).children()); // show ul li
     }
 
     // show active toc and his sibling tocs

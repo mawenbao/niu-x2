@@ -35,10 +35,10 @@ blockquote p {
     -webkit-backface-visibility: hidden;
 }
 
-#body-content ul ul, 
-#body-content ol ul,
-#body-content ul ol,
-#body-content ol ol {
+#niu2-main-content ul ul, 
+#niu2-main-content ol ul,
+#niu2-main-content ul ol,
+#niu2-main-content ol ol {
     margin-bottom: 5px;
 }
 
@@ -120,9 +120,13 @@ a.niu2-active-toc:before {
     padding-left: 35px;
 }
 
+#niu2-sidebar-toc-list li ul {
+    display: none;
+}
+
 #niu2-sidebar-toc-list ul li {
     display: none;
-    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 #niu2-sidebar-toc-list li {
