@@ -4,12 +4,6 @@
  * @nav-link-padding: 7px
  */
 
-ol li { display: block; }
-ol { list-style: none; } /* hide original list counter */
-ol > li:first-child { counter-reset: item; } /* reset counter */
-ol > li { counter-increment: item; } /* increment counter */
-ol > li:before { content: counters(item, ".") "."; } /* print counter */
-
 i {
     margin-right: 4px;
 }
@@ -130,6 +124,12 @@ a.niu2-active-toc:before {
     padding: 0 3px;
     margin-left: 3px;
 }
+
+#niu2-sidebar-toc ol li { display: block; }
+#niu2-sidebar-toc ol { list-style: none; } /* hide original list counter */
+#niu2-sidebar-toc ol > li:first-child { counter-reset: item; } /* reset counter */
+#niu2-sidebar-toc ol > li { counter-increment: item; } /* increment counter */
+#niu2-sidebar-toc ol > li:before { content: counters(item, ".") "."; } /* print counter */
 
 #niu2-sidebar-toc-list li ol {
     display: none;
