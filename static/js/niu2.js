@@ -100,9 +100,9 @@ function updateTocLinkStatus(anchor) {
 function openActiveTocList(active) {
     // show next level tocs
     activeChilds = active.children();
-    if (activeChilds.length > 1 && $(activeChilds[1]).is('ul')) {
-        showToc($(activeChilds[1]));  // show ul
-        showToc($(activeChilds[1]).children()); // show ul li
+    if (activeChilds.length > 1 && $(activeChilds[1]).is('ol')) {
+        showToc($(activeChilds[1]));  // show ol
+        showToc($(activeChilds[1]).children()); // show ol li
     }
 
     // show active toc and his sibling tocs
@@ -115,12 +115,14 @@ function openActiveTocList(active) {
             return false;
         }
         showToc($(elem));
-        showToc($(elem).siblings());
+        if ($(elem).is('li')) {
+            showToc($(elem).siblings());
+        }
     });
 }
 
 function closeAllTocList() {
-    hideToc($('#niu2-sidebar-toc-list ul li'));
+    hideToc($('#niu2-sidebar-toc-list ol li'));
 }
 
 function initTocLinkScrollAnimation() {
@@ -142,10 +144,19 @@ function initTocLinkScrollAnimation() {
 }
 
 function showToc(tocs) {
-    tocs.css('display', 'block');
+    tocs.each(function(i, elem) {
+        toc = $(elem);
+        if (toc.is('li')) {
+            toc.attr('style', 'display:list-item;');
+        } else if (toc.is('ol')) {
+            toc.attr('style', 'display:block;');
+        }
+    });
 }
 
 function hideToc(tocs) {
-    tocs.css('display', 'none');
+    tocs.each(function(i, elem) {
+        $(elem).attr('style', 'display:none;');
+    });
 }
 

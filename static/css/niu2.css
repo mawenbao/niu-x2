@@ -4,6 +4,12 @@
  * @nav-link-padding: 7px
  */
 
+ol li { display: block; }
+ol { list-style: none; } /* hide original list counter */
+ol > li:first-child { counter-reset: item; } /* reset counter */
+ol > li { counter-increment: item; } /* increment counter */
+ol > li:before { content: counters(item, ".") "."; } /* print counter */
+
 i {
     margin-right: 4px;
 }
@@ -69,14 +75,12 @@ img {
 }
 
 a.niu2-active-toc, a.niu2-active-toc:hover {
-    /*
     color: white;
     background-color: #428bca;
-    display: block;
-    padding: 0 5px;
-    */
+    display: inline-block;
 }
 
+/*
 a.niu2-active-toc:before {
     font-family: FontAwesome;
     content: "\f105";
@@ -85,6 +89,7 @@ a.niu2-active-toc:before {
     color: black;
     display: inline-block;
 }
+*/
 
 .niu2-sidebar-tag {
     margin-top: 3px;
@@ -117,20 +122,25 @@ a.niu2-active-toc:before {
 }
 
 #niu2-sidebar-toc-list {
-    padding-left: 35px;
+    padding-left: 17px;
 }
 
-#niu2-sidebar-toc-list li ul {
+#niu2-sidebar-toc-list a {
+    padding: 0 3px;
+    margin-left: 3px;
+}
+
+#niu2-sidebar-toc-list li ol {
     display: none;
 }
 
-#niu2-sidebar-toc-list ul li {
+#niu2-sidebar-toc-list ol li {
     display: none;
     margin-top: 2px;
 }
 
 #niu2-sidebar-toc-list li {
-    list-style: none;
+    /*list-style: none;*/
 }
 
 #niu2-sidebar-toc-list li {

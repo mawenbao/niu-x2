@@ -23,14 +23,14 @@
 <div id="niu2-sidebar-toc" class="niu2-sidebar">
     {%- if article -%}
     <div class="niu2-sidebar-label"><i class="icon-list-ul"></i>{{ NIUX2_HEADER_TOC_TRANSL | default("TOC") }}</div>
-    <ul id="niu2-sidebar-toc-list">
+    <ol id="niu2-sidebar-toc-list">
         {{ article.html_toc }}
         {%- if (article.metadata['comment'] is not defined) or (article.metadata['comment'] | trim | upper == 'ON') -%}
         {%- if DISQUS_SITENAME or NIUX2_DUOSHUO_SHORTNAME -%}
         <li><a href="#content-comments">{{ NIUX2_COMMENTS_TRANSL | default("Comments") }}</a></li>
         {%- endif -%}
         {%- endif -%}
-    </ul>
+    </ol>
     {%- endif -%}
 </div>
 
