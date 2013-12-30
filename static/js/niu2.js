@@ -128,8 +128,10 @@ function initTocLinkScrollAnimation() {
     $('#niu2-sidebar-toc-list a').each(function(i, e) {
         $(e).click(function(ev) {
             ev.preventDefault();
-            window.gEnableTocStatusUpdate = false;
             anchor = $(e).attr('href').substring($(e).attr('href').indexOf('#'))
+            // update url anchor
+            window.history.pushState('toc change', anchor, anchor);
+            window.gEnableTocStatusUpdate = false;
             $('body, html').animate(
                 {scrollTop: $(anchor).offset().top},
                 400,
