@@ -78,6 +78,7 @@ a.niu2-active-toc, a.niu2-active-toc:hover {
     color: white;
     background-color: #428bca;
     display: inline-block;
+    text-decoration: none;
 }
 
 /*
