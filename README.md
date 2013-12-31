@@ -10,7 +10,11 @@ BSD 3-Clause License. Please see LICENSE.txt for more details.
 
 ## Demo
 
-![Demo image of niu-x2 theme](https://raw.github.com/wilbur-ma/niu-x2/master/screenshot.png "niu-x2 demo image")
+![Demo image of niu-x2 theme](https://raw.github.com/mawenbao/niu-x2/master/screenshot.png "niu-x2 demo image")
+
+Demo image of sidebar-toc branch:
+
+![Demo image of sidebar-toc branch](
 
 You can check out my blog [blog.atime.me](http://blog.atime.me) for a live demo.
 
@@ -25,6 +29,7 @@ You can check out my blog [blog.atime.me](http://blog.atime.me) for a live demo.
 *  Auto-generated copyright year range, which is actually from the year of your first article to the lastest.
 *  Fixed position navigation bar.
 *  TOC(table of contents) in navigation bar with the help of [extract_headings](https://github.com/wilbur-ma/extract_headings) plugin, with no addtional dependencies and no `[TOC]` in your markdown file. (Currently only markdown is supported)
+*  TOC(table of contents) in a sidebar.
 *  Article/Page comment on/off controled by file metadata.
 *  Pygments theme support.
 *  Categories shown in a dropdown list.
@@ -50,6 +55,12 @@ Then set `THEME` variable to the path of the repository folder you have just clo
 The theme depends on the jinja2 `expression statement` extension which should be added to your pelican configuration as below:
 
     JINJA_EXTENSIONS = ['jinja2.ext.ExprStmtExtension',]
+
+## Sidebar TOC
+Please use the `sidebar-toc` branch.
+
+    cd niu-x2
+    git co sidebar-toc
 
 ## TODO
 
