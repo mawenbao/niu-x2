@@ -12,10 +12,6 @@ BSD 3-Clause License. Please see LICENSE.txt for more details.
 
 ![Demo image of niu-x2 theme](https://raw.github.com/mawenbao/niu-x2/master/screenshot.png "niu-x2 demo image")
 
-Demo image of sidebar-toc branch:
-
-![Demo image of sidebar-toc branch](
-
 You can check out my blog [blog.atime.me](http://blog.atime.me) for a live demo.
 
 ## Features
