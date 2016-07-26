@@ -12,8 +12,6 @@ BSD 3-Clause License. Please see LICENSE.txt for more details.
 
 ![Demo image of niu-x2 theme](https://raw.github.com/mawenbao/niu-x2/master/screenshot.png "niu-x2 demo image")
 
-You can check out my blog [blog.atime.me](http://blog.atime.me) for a live demo.
-
 ## Features
 
 *  Bootstrap3.0.0, font-awesome3.2.1 and jQuery1.10 included.
@@ -158,7 +156,7 @@ Currently, there is not a search result page in this theme, so I suggest that yo
     NIUX2_FOOTER_ICONS = [
          ("icon-envelope-alt", "my email address", "mailto: wilbur.ma@foxmail.com"),
          ("icon-github-alt", "my github page", "http://github.com/wilbur-ma"),
-         ("icon-rss", "subscribe my blog via rss", "http://atime.me/feed.xml"),
+         ("icon-rss", "subscribe my blog via rss", "http://mawenbao.com/feed.xml"),
          ]
 
 ### Translation settings
